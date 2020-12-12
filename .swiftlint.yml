@@ -2,7 +2,7 @@ included:
   - iOS
   - macOS
   - Shared
-enabled_rules:
+opt_in_rules:
   - anyobject_protocol
   - array_init
   - attributes
@@ -54,6 +54,7 @@ enabled_rules:
   - no_grouping_extension
   - number_separator
   - object_literal
+  - opening_brace
   - operator_usage_whitespace
   - overridden_super_call
   - pattern_matching_keywords
@@ -75,7 +76,6 @@ enabled_rules:
 disabled_rules:
   - force_try
   - no_extension_access_modifier
-  - opening_brace
   - trailing_comma
   - trailing_newline
 file_header:
@@ -87,7 +87,7 @@ file_header:
     \/\/  Created by .*? on \d{4}-\d{2}-\d{2}\.
     \/\/  Copyright © \d{4} vinicius.io - All rights reserved\.
     \/\/
-variable_name:
+identifier_name:
   min_length: 3
   excluded:
     - i

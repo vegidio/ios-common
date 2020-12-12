@@ -12,7 +12,7 @@ import SwiftUI
 internal struct MainApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            HomeScreen()
         }
     }
 }

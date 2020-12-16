@@ -20,7 +20,7 @@ internal struct UserListRow: View {
     }
 }
 
-private struct UserListRow_Previews: PreviewProvider {
+internal struct UserListRow_Previews: PreviewProvider {
     static var user: User = {
         var user = User()
         user.username = "vegidio"

@@ -14,7 +14,9 @@ internal struct UserListScreen: View {
     var body: some View {
         List {
             ForEach(viewModel.users, id: \.objectId) { user in
-                UserListRow(user: user)
+                NavigationLink(destination: UserScreen(objectId: user.objectId ?? "-")) {
+                    UserListRow(user: user)
+                }
             }
         }
         .onAppear {
@@ -24,7 +26,7 @@ internal struct UserListScreen: View {
     }
 }
 
-private struct UserListScreen_Previews: PreviewProvider {
+internal struct UserListScreen_Previews: PreviewProvider {
     static var previews: some View {
         UserListScreen()
     }

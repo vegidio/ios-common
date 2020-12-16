@@ -20,7 +20,7 @@ internal struct HomeMenuRow: View {
     }
 }
 
-private struct HomeMenuRow_Previews: PreviewProvider {
+internal struct HomeMenuRow_Previews: PreviewProvider {
     static var previews: some View {
         HomeMenuRow(menuOption: MenuOption(title: "Test"))
     }

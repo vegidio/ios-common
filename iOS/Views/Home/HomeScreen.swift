@@ -33,7 +33,7 @@ internal struct HomeScreen: View {
     }
 }
 
-private struct HomeScreen_Previews: PreviewProvider {
+internal struct HomeScreen_Previews: PreviewProvider {
     static var previews: some View {
         HomeScreen()
     }

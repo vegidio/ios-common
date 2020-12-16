@@ -2,7 +2,7 @@
 //  UserViewModel.swift
 //  iOS Common
 //
-//  Created by Vinícius Egidio on 2020-12-12.
+//  Created by Vinícius Egidio on 2020-12-16.
 //  Copyright © 2020 vinicius.io - All rights reserved.
 //
 
@@ -11,7 +11,7 @@ import Foundation
 import SAKNetwork
 import SAKUtil
 
-internal class UserListViewModel: ObservableObject {
+internal class UserViewModel: ObservableObject {
     // MARK: - Dependency Injection
 
     @Inject private var service: CommonService
@@ -19,12 +19,12 @@ internal class UserListViewModel: ObservableObject {
     // MARK: - Combine Properties
 
     @Published var state = NetworkState.idle
-    @Published var users = [User]()
+    @Published var user = User()
 
     private var disposables = Set<AnyCancellable>()
 
-    func fetchUsers() {
-        service.getUsers()
+    func fetchUserById(objectId: String) {
+        service.getUserById(objectId: objectId)
             .subscribe(on: DispatchQueue.global(qos: .background))
             .receive(on: DispatchQueue.main)
             .handleEvents(receiveSubscription: { _ in
@@ -38,8 +38,8 @@ internal class UserListViewModel: ObservableObject {
                     print(error)
                     self.state = .error
                 }
-            }, receiveValue: { response in
-                self.users = response.results
+            }, receiveValue: { user in
+                self.user = user
             }).store(in: &disposables)
     }
 }

@@ -17,4 +17,9 @@ internal class CommonService: RestFactory<CombineResponse> {
         let url = "\(baseUrl)/classes/_User"
         return sendRequest(.get, url)
     }
+
+    func getUserById(objectId: String) -> AnyPublisher<User, Error> {
+        let url = "\(baseUrl)/classes/_User/\(objectId)"
+        return sendRequest(.get, url)
+    }
 }

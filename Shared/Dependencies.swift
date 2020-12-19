@@ -12,15 +12,23 @@ import Swinject
 
 extension Container: SAKUtil.Resolver {}
 
-internal let container: Container = {
+// swiftlint:disable:next identifier_name
+internal let di: Container = {
     let container = Container()
 
-    // Services
+    // MARK: - ViewModels
+
+    container.register(UserListViewModel.self) { _ in UserListViewModel() }
+
+    container.register(UserViewModel.self) { _ in UserViewModel() }
+
+    // MARK: - Services
+
     container.register(CommonService.self) { _ in
         CommonService().apply {
             $0.headers["X-Parse-Application-Id"] = "common"
         }
-    }
+    }.inObjectScope(.container)
 
     return container
 }()

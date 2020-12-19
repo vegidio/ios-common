@@ -9,7 +9,8 @@
 import SwiftUI
 
 internal struct UserListScreen: View {
-    @ObservedObject private var viewModel = UserListViewModel()
+    // swiftlint:disable:next force_unwrapping
+    @ObservedObject private var viewModel = di.resolve(UserListViewModel.self)!
 
     var body: some View {
         List {

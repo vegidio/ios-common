@@ -12,7 +12,7 @@ import SwiftUI
 @main
 internal struct MainApp: App {
     init() {
-        InjectSettings.resolver = container
+        InjectSettings.resolver = di
     }
 
     var body: some Scene {

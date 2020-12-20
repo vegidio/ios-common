@@ -6,23 +6,22 @@
 //  Copyright © 2020 vinicius.io - All rights reserved.
 //
 
+import SAKView
 import SwiftUI
 
 internal struct UserListScreen: View {
     // swiftlint:disable:next force_unwrapping
-    @ObservedObject private var viewModel = di.resolve(UserListViewModel.self)!
+    @StateObject private var viewModel = di.resolve(UserListViewModel.self)!
 
     var body: some View {
         List {
             ForEach(viewModel.users, id: \.objectId) { user in
-                NavigationLink(destination: UserScreen(objectId: user.objectId ?? "-")) {
+                NavigationLink(destination: LazyView(UserScreen(objectId: user.objectId ?? "-"))) {
                     UserListRow(user: user)
                 }
             }
         }
-        .onAppear {
-            viewModel.fetchUsers()
-        }
+        .onAppear { viewModel.fetchUsers() }
         .navigationBarTitle("User List")
     }
 }

@@ -33,6 +33,7 @@
 		2A5DACF425896B1B002A629A /* UserListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5DACF025896B1B002A629A /* UserListScreen.swift */; };
 		2A7ABF93258BD740002DFD99 /* Dependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7ABF92258BD740002DFD99 /* Dependencies.swift */; };
 		2A7ABF94258BD740002DFD99 /* Dependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7ABF92258BD740002DFD99 /* Dependencies.swift */; };
+		2AB2E671258E894E00551592 /* View in Frameworks */ = {isa = PBXBuildFile; productRef = 2AB2E670258E894E00551592 /* View */; };
 		2ACEC0882584090100F21713 /* MainApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACEC075258408FF00F21713 /* MainApp.swift */; };
 		2ACEC0892584090100F21713 /* MainApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACEC075258408FF00F21713 /* MainApp.swift */; };
 		2ACEC08C2584090100F21713 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2ACEC0772584090100F21713 /* Assets.xcassets */; };
@@ -88,6 +89,7 @@
 				2A41E090258DFFC300B132D4 /* Util in Frameworks */,
 				2A41E091258DFFC300B132D4 /* Network in Frameworks */,
 				2A41E092258DFFC300B132D4 /* Swinject in Frameworks */,
+				2AB2E671258E894E00551592 /* View in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -180,6 +182,13 @@
 			path = UserList;
 			sourceTree = "<group>";
 		};
+		2AB2E66F258E894E00551592 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		2ACEC06F258408FF00F21713 = {
 			isa = PBXGroup;
 			children = (
@@ -192,6 +201,7 @@
 				145579C7555D95F11FA45597 /* .swiftlint.yml */,
 				145570C76CB53F2BA74CB619 /* .gitignore */,
 				14557464630DBED529D39677 /* .editorconfig */,
+				2AB2E66F258E894E00551592 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -266,6 +276,7 @@
 				2ACE67592584B08C00208ED1 /* Util */,
 				2ACE675B2584B08C00208ED1 /* Network */,
 				2AA211FB258AA12D00552537 /* Swinject */,
+				2AB2E670258E894E00551592 /* View */,
 			);
 			productName = "iOS Common (iOS)";
 			productReference = 2ACEC07C2584090100F21713 /* ios-common.app */;
@@ -747,7 +758,7 @@
 			repositoryURL = "https://github.com/vegidio-ios/swiss-army-knife";
 			requirement = {
 				kind = exactVersion;
-				version = 1.1.0;
+				version = 1.2.1;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -762,6 +773,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 2AA211FA258AA12D00552537 /* XCRemoteSwiftPackageReference "Swinject" */;
 			productName = Swinject;
+		};
+		2AB2E670258E894E00551592 /* View */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2ACE67582584B08C00208ED1 /* XCRemoteSwiftPackageReference "swiss-army-knife" */;
+			productName = View;
 		};
 		2ACE67592584B08C00208ED1 /* Util */ = {
 			isa = XCSwiftPackageProductDependency;

@@ -1,0 +1,38 @@
+//
+//  HomeScreen.swift
+//  iOS Common
+//
+//  Created by Vinicius Egidio on 2023-01-16.
+//
+
+import SwiftUI
+
+struct HomeScreen: View {
+    private let menuOptions = [
+        MenuOption(title: "Movies", destination: EmptyView().toAnyView()),
+        MenuOption(title: "Actors", destination: EmptyView().toAnyView())
+    ]
+    
+    var body: some View {
+        NavigationView {
+            List(menuOptions) { option in
+                NavigationLink(destination: option.destination) {
+                    HomeMenuRow(menuOption: option)
+                }
+            }
+            .navigationTitle("Home")
+        }
+    }
+}
+
+struct MenuOption: Identifiable {
+    let id = UUID()
+    var title: String
+    var destination: AnyView
+}
+
+struct HomeScreen_Previews: PreviewProvider {
+    static var previews: some View {
+        HomeScreen()
+    }
+}

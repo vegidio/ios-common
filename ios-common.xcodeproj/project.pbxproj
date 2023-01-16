@@ -7,18 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		783DB631297550E200AC92B2 /* iOS_CommonApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783DB630297550E200AC92B2 /* iOS_CommonApp.swift */; };
-		783DB633297550E200AC92B2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783DB632297550E200AC92B2 /* ContentView.swift */; };
+		783DB631297550E200AC92B2 /* iOSCommonApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783DB630297550E200AC92B2 /* iOSCommonApp.swift */; };
 		783DB635297550E200AC92B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 783DB634297550E200AC92B2 /* Assets.xcassets */; };
 		783DB638297550E200AC92B2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 783DB637297550E200AC92B2 /* Preview Assets.xcassets */; };
+		7886D64029759EBD00A36158 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7886D63F29759EBD00A36158 /* HomeScreen.swift */; };
+		7886D6432975A10700A36158 /* View+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7886D6422975A10700A36158 /* View+Ext.swift */; };
+		7886D6462975A18400A36158 /* LazyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7886D6452975A18400A36158 /* LazyView.swift */; };
+		7886D6482975A49800A36158 /* HomeMenuRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7886D6472975A49800A36158 /* HomeMenuRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		783DB62D297550E200AC92B2 /* iOS Common.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS Common.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		783DB630297550E200AC92B2 /* iOS_CommonApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_CommonApp.swift; sourceTree = "<group>"; };
-		783DB632297550E200AC92B2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		783DB630297550E200AC92B2 /* iOSCommonApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSCommonApp.swift; sourceTree = "<group>"; };
 		783DB634297550E200AC92B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		783DB637297550E200AC92B2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		7886D63F29759EBD00A36158 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
+		7886D6422975A10700A36158 /* View+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Ext.swift"; sourceTree = "<group>"; };
+		7886D6452975A18400A36158 /* LazyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyView.swift; sourceTree = "<group>"; };
+		7886D6472975A49800A36158 /* HomeMenuRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMenuRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,7 +41,7 @@
 		783DB624297550E200AC92B2 = {
 			isa = PBXGroup;
 			children = (
-				783DB62F297550E200AC92B2 /* iOS Common */,
+				783DB62F297550E200AC92B2 /* Source */,
 				783DB62E297550E200AC92B2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -48,15 +54,17 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		783DB62F297550E200AC92B2 /* iOS Common */ = {
+		783DB62F297550E200AC92B2 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				783DB630297550E200AC92B2 /* iOS_CommonApp.swift */,
-				783DB632297550E200AC92B2 /* ContentView.swift */,
+				7886D6412975A0EA00A36158 /* Extensions */,
+				7886D63D29759E8F00A36158 /* Feature */,
+				7886D6442975A16E00A36158 /* Shared */,
+				783DB630297550E200AC92B2 /* iOSCommonApp.swift */,
 				783DB634297550E200AC92B2 /* Assets.xcassets */,
 				783DB636297550E200AC92B2 /* Preview Content */,
 			);
-			path = "iOS Common";
+			path = Source;
 			sourceTree = "<group>";
 		};
 		783DB636297550E200AC92B2 /* Preview Content */ = {
@@ -65,6 +73,39 @@
 				783DB637297550E200AC92B2 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		7886D63D29759E8F00A36158 /* Feature */ = {
+			isa = PBXGroup;
+			children = (
+				7886D63E29759EA400A36158 /* Home */,
+			);
+			path = Feature;
+			sourceTree = "<group>";
+		};
+		7886D63E29759EA400A36158 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				7886D63F29759EBD00A36158 /* HomeScreen.swift */,
+				7886D6472975A49800A36158 /* HomeMenuRow.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		7886D6412975A0EA00A36158 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7886D6422975A10700A36158 /* View+Ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		7886D6442975A16E00A36158 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				7886D6452975A18400A36158 /* LazyView.swift */,
+			);
+			path = Shared;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +124,8 @@
 			dependencies = (
 			);
 			name = "iOS Common";
+			packageProductDependencies = (
+			);
 			productName = "iOS Common";
 			productReference = 783DB62D297550E200AC92B2 /* iOS Common.app */;
 			productType = "com.apple.product-type.application";
@@ -102,7 +145,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 783DB628297550E200AC92B2 /* Build configuration list for PBXProject "iOS Common" */;
+			buildConfigurationList = 783DB628297550E200AC92B2 /* Build configuration list for PBXProject "ios-common" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -111,6 +154,8 @@
 				Base,
 			);
 			mainGroup = 783DB624297550E200AC92B2;
+			packageReferences = (
+			);
 			productRefGroup = 783DB62E297550E200AC92B2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,8 +182,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				783DB633297550E200AC92B2 /* ContentView.swift in Sources */,
-				783DB631297550E200AC92B2 /* iOS_CommonApp.swift in Sources */,
+				7886D6432975A10700A36158 /* View+Ext.swift in Sources */,
+				7886D6482975A49800A36158 /* HomeMenuRow.swift in Sources */,
+				783DB631297550E200AC92B2 /* iOSCommonApp.swift in Sources */,
+				7886D6462975A18400A36158 /* LazyView.swift in Sources */,
+				7886D64029759EBD00A36158 /* HomeScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,9 +314,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"iOS Common/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Source/Preview Content\"";
+				DEVELOPMENT_TEAM = V5TFNMYA3P;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "iOS Common";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -279,7 +329,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "io.vinicius.iOS-Common";
+				PRODUCT_BUNDLE_IDENTIFIER = "io.vinicius.ios-common";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -294,9 +344,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"iOS Common/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Source/Preview Content\"";
+				DEVELOPMENT_TEAM = V5TFNMYA3P;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "iOS Common";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -307,7 +359,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "io.vinicius.iOS-Common";
+				PRODUCT_BUNDLE_IDENTIFIER = "io.vinicius.ios-common";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -318,7 +370,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		783DB628297550E200AC92B2 /* Build configuration list for PBXProject "iOS Common" */ = {
+		783DB628297550E200AC92B2 /* Build configuration list for PBXProject "ios-common" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				783DB639297550E200AC92B2 /* Debug */,

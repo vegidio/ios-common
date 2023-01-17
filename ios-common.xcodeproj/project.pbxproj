@@ -7,24 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		783DB631297550E200AC92B2 /* iOSCommonApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783DB630297550E200AC92B2 /* iOSCommonApp.swift */; };
+		783DB631297550E200AC92B2 /* MainApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783DB630297550E200AC92B2 /* MainApp.swift */; };
 		783DB635297550E200AC92B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 783DB634297550E200AC92B2 /* Assets.xcassets */; };
 		783DB638297550E200AC92B2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 783DB637297550E200AC92B2 /* Preview Assets.xcassets */; };
 		7886D64029759EBD00A36158 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7886D63F29759EBD00A36158 /* HomeScreen.swift */; };
 		7886D6432975A10700A36158 /* View+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7886D6422975A10700A36158 /* View+Ext.swift */; };
 		7886D6462975A18400A36158 /* LazyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7886D6452975A18400A36158 /* LazyView.swift */; };
 		7886D6482975A49800A36158 /* HomeMenuRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7886D6472975A49800A36158 /* HomeMenuRow.swift */; };
+		7886D64B2975BA6600A36158 /* MoviesScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7886D64A2975BA6600A36158 /* MoviesScreen.swift */; };
+		7886D64E2975BAB900A36158 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 7886D64D2975BAB900A36158 /* Alamofire */; };
+		7886D6512975BB8B00A36158 /* RestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7886D6502975BB8B00A36158 /* RestFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		783DB62D297550E200AC92B2 /* iOS Common.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS Common.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		783DB630297550E200AC92B2 /* iOSCommonApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSCommonApp.swift; sourceTree = "<group>"; };
+		783DB630297550E200AC92B2 /* MainApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainApp.swift; sourceTree = "<group>"; };
 		783DB634297550E200AC92B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		783DB637297550E200AC92B2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7886D63F29759EBD00A36158 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		7886D6422975A10700A36158 /* View+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Ext.swift"; sourceTree = "<group>"; };
 		7886D6452975A18400A36158 /* LazyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyView.swift; sourceTree = "<group>"; };
 		7886D6472975A49800A36158 /* HomeMenuRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMenuRow.swift; sourceTree = "<group>"; };
+		7886D64A2975BA6600A36158 /* MoviesScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesScreen.swift; sourceTree = "<group>"; };
+		7886D6502975BB8B00A36158 /* RestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7886D64E2975BAB900A36158 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,7 +66,8 @@
 				7886D6412975A0EA00A36158 /* Extensions */,
 				7886D63D29759E8F00A36158 /* Feature */,
 				7886D6442975A16E00A36158 /* Shared */,
-				783DB630297550E200AC92B2 /* iOSCommonApp.swift */,
+				7886D64F2975BB6F00A36158 /* Utils */,
+				783DB630297550E200AC92B2 /* MainApp.swift */,
 				783DB634297550E200AC92B2 /* Assets.xcassets */,
 				783DB636297550E200AC92B2 /* Preview Content */,
 			);
@@ -79,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				7886D63E29759EA400A36158 /* Home */,
+				7886D6492975BA4300A36158 /* Movies */,
 			);
 			path = Feature;
 			sourceTree = "<group>";
@@ -108,6 +116,22 @@
 			path = Shared;
 			sourceTree = "<group>";
 		};
+		7886D6492975BA4300A36158 /* Movies */ = {
+			isa = PBXGroup;
+			children = (
+				7886D64A2975BA6600A36158 /* MoviesScreen.swift */,
+			);
+			path = Movies;
+			sourceTree = "<group>";
+		};
+		7886D64F2975BB6F00A36158 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				7886D6502975BB8B00A36158 /* RestFactory.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -115,6 +139,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 783DB63B297550E200AC92B2 /* Build configuration list for PBXNativeTarget "iOS Common" */;
 			buildPhases = (
+				78856FC6297677B40020030E /* SwiftLint */,
 				783DB629297550E200AC92B2 /* Sources */,
 				783DB62A297550E200AC92B2 /* Frameworks */,
 				783DB62B297550E200AC92B2 /* Resources */,
@@ -125,6 +150,7 @@
 			);
 			name = "iOS Common";
 			packageProductDependencies = (
+				7886D64D2975BAB900A36158 /* Alamofire */,
 			);
 			productName = "iOS Common";
 			productReference = 783DB62D297550E200AC92B2 /* iOS Common.app */;
@@ -155,6 +181,7 @@
 			);
 			mainGroup = 783DB624297550E200AC92B2;
 			packageReferences = (
+				7886D64C2975BAB900A36158 /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = 783DB62E297550E200AC92B2 /* Products */;
 			projectDirPath = "";
@@ -177,6 +204,28 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		78856FC6297677B40020030E /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		783DB629297550E200AC92B2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -184,7 +233,9 @@
 			files = (
 				7886D6432975A10700A36158 /* View+Ext.swift in Sources */,
 				7886D6482975A49800A36158 /* HomeMenuRow.swift in Sources */,
-				783DB631297550E200AC92B2 /* iOSCommonApp.swift in Sources */,
+				7886D64B2975BA6600A36158 /* MoviesScreen.swift in Sources */,
+				7886D6512975BB8B00A36158 /* RestFactory.swift in Sources */,
+				783DB631297550E200AC92B2 /* MainApp.swift in Sources */,
 				7886D6462975A18400A36158 /* LazyView.swift in Sources */,
 				7886D64029759EBD00A36158 /* HomeScreen.swift in Sources */,
 			);
@@ -389,6 +440,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7886D64C2975BAB900A36158 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = exactVersion;
+				version = 5.6.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7886D64D2975BAB900A36158 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7886D64C2975BAB900A36158 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 783DB625297550E200AC92B2 /* Project object */;
 }

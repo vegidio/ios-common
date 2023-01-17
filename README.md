@@ -16,9 +16,9 @@ I used a set of well-known Android libraries so we don't have to reinvent the wh
 
 * `interface/Callback` - a generic callback interface using class templates.
 
-## 🎨 Code Style
+## 🎨 Code Correctness
 
-This project uses [SwiftFormat](https://github.com/nicklockwood/SwiftFormat) to keep the code format following a set of rules. To keep the code format, run the command below in the project's root dir:
+This project uses [SwiftFormat](https://github.com/nicklockwood/SwiftFormat) to keep the code formatted and [SwiftLint](https://github.com/realm/SwiftLint) to follow best practices. The linting is done automatically on every build, but in order to format the code run the command below in the project's root dir:
 
 ```
 $ swiftformat .

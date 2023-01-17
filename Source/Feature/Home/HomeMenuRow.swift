@@ -7,9 +7,9 @@
 
 import SwiftUI
 
-struct HomeMenuRow: View {
+internal struct HomeMenuRow: View {
     let menuOption: MenuOption
-    
+
     var body: some View {
         HStack(alignment: .center) {
             Text(menuOption.title)
@@ -19,7 +19,7 @@ struct HomeMenuRow: View {
     }
 }
 
-struct HomeMenuRow_Previews: PreviewProvider {
+internal struct HomeMenuRow_Previews: PreviewProvider {
     static var previews: some View {
         let menuOption = MenuOption(title: "Vinicius", destination: EmptyView().toAnyView())
         HomeMenuRow(menuOption: menuOption)

@@ -43,9 +43,9 @@
 --enable spaceInsideGenerics
 --enable spaceInsideParens
 --enable todos
---enable trailingCommas
 --enable wrapEnumCases
 --disable linebreakAtEndOfFile
+--disable trailingCommas
 --disable wrapSwitchCases
 
 # options

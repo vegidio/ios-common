@@ -7,12 +7,19 @@
 
 import SwiftUI
 
-struct HomeScreen: View {
+internal struct MenuOption: Identifiable {
+    let id = UUID()
+    var title: String
+    var destination: AnyView
+}
+
+internal struct HomeScreen: View {
     private let menuOptions = [
         MenuOption(title: "Movies", destination: EmptyView().toAnyView()),
-        MenuOption(title: "Actors", destination: EmptyView().toAnyView())
+        MenuOption(title: "Actors", destination: EmptyView().toAnyView()),
+        MenuOption(title: "Genres", destination: EmptyView().toAnyView())
     ]
-    
+
     var body: some View {
         NavigationView {
             List(menuOptions) { option in
@@ -25,13 +32,7 @@ struct HomeScreen: View {
     }
 }
 
-struct MenuOption: Identifiable {
-    let id = UUID()
-    var title: String
-    var destination: AnyView
-}
-
-struct HomeScreen_Previews: PreviewProvider {
+private struct HomeScreen_Previews: PreviewProvider {
     static var previews: some View {
         HomeScreen()
     }

@@ -15,7 +15,8 @@ internal struct MenuOption: Identifiable {
 
 internal struct HomeScreen: View {
     private let menuOptions = [
-        MenuOption(title: "Movies", destination: EmptyView().toAnyView()),
+        MenuOption(title: "Auth", destination: LazyView(AuthScreen()).toAnyView()),
+        MenuOption(title: "Movies", destination: LazyView(MoviesScreen()).toAnyView()),
         MenuOption(title: "Actors", destination: EmptyView().toAnyView()),
         MenuOption(title: "Genres", destination: EmptyView().toAnyView())
     ]

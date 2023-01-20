@@ -172,7 +172,6 @@ opt_in_rules:
   - strong_iboutlet
   - superfluous_disable_command
   - switch_case_alignment
-  - switch_case_on_newline
   - syntactic_sugar
   - test_case_accessibility
   - todo
@@ -217,6 +216,7 @@ disabled_rules:
   - no_extension_access_modifier
   - no_magic_numbers
   - required_deinit
+  - switch_case_on_newline
 analyzer_rules:
   - capture_variable
   - explicit_self

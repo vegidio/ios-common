@@ -20,17 +20,28 @@ internal class RestFactory {
     func sendRequest<T: Codable>(
         _ method: HTTPMethod,
         _ uri: String,
-        parameters: Parameters? = nil,
+        params: (some Encodable)? = nil,
         headers: HTTPHeaders? = nil
     ) -> AnyPublisher<T, RestError> {
         guard let url = URL(string: uri) else {
             return Fail<T, RestError>(error: .invalidUrl).eraseToAnyPublisher()
         }
 
-        return AF.request(url, method: method, parameters: parameters, headers: headers)
+        let enconder = getParameterEncoder(method)
+        return AF.request(url, method: method, parameters: params, encoder: enconder, headers: headers)
             .publishDecodable(type: T.self, queue: queue)
             .value()
             .mapError { error in RestError.unknown(message: error.localizedDescription) }
             .eraseToAnyPublisher()
+    }
+
+    // MARK: - Private methods
+
+    private func getParameterEncoder(_ method: HTTPMethod) -> ParameterEncoder {
+        guard method == .get else {
+            return JSONParameterEncoder.default
+        }
+
+        return URLEncodedFormParameterEncoder.default
     }
 }

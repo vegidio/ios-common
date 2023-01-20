@@ -12,6 +12,9 @@
 		780B7A942979D8FF008E493C /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780B7A932979D8FF008E493C /* AuthViewModel.swift */; };
 		780B7A962979DBD0008E493C /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780B7A952979DBD0008E493C /* AuthService.swift */; };
 		780B7A982979F885008E493C /* AuthScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780B7A972979F885008E493C /* AuthScreen.swift */; };
+		780B7A9B297B1EC7008E493C /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 780B7A9A297B1EC7008E493C /* Swinject */; };
+		780B7A9D297B23D9008E493C /* Inject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780B7A9C297B23D9008E493C /* Inject.swift */; };
+		780B7A9F297B251D008E493C /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780B7A9E297B251D008E493C /* Container.swift */; };
 		783DB631297550E200AC92B2 /* MainApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783DB630297550E200AC92B2 /* MainApp.swift */; };
 		783DB635297550E200AC92B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 783DB634297550E200AC92B2 /* Assets.xcassets */; };
 		783DB638297550E200AC92B2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 783DB637297550E200AC92B2 /* Preview Assets.xcassets */; };
@@ -30,6 +33,8 @@
 		780B7A932979D8FF008E493C /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		780B7A952979DBD0008E493C /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		780B7A972979F885008E493C /* AuthScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthScreen.swift; sourceTree = "<group>"; };
+		780B7A9C297B23D9008E493C /* Inject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inject.swift; sourceTree = "<group>"; };
+		780B7A9E297B251D008E493C /* Container.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
 		783DB62D297550E200AC92B2 /* iOS Common.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS Common.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		783DB630297550E200AC92B2 /* MainApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainApp.swift; sourceTree = "<group>"; };
 		783DB634297550E200AC92B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -48,6 +53,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7886D64E2975BAB900A36158 /* Alamofire in Frameworks */,
+				780B7A9B297B1EC7008E493C /* Swinject in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,6 +103,7 @@
 				7886D63D29759E8F00A36158 /* Screens */,
 				7886D6442975A16E00A36158 /* Shared */,
 				7886D64F2975BB6F00A36158 /* Utils */,
+				780B7A9E297B251D008E493C /* Container.swift */,
 				783DB630297550E200AC92B2 /* MainApp.swift */,
 				783DB634297550E200AC92B2 /* Assets.xcassets */,
 				783DB636297550E200AC92B2 /* Preview Content */,
@@ -158,6 +165,7 @@
 		7886D64F2975BB6F00A36158 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				780B7A9C297B23D9008E493C /* Inject.swift */,
 				7886D6502975BB8B00A36158 /* RestFactory.swift */,
 			);
 			path = Utils;
@@ -182,6 +190,7 @@
 			name = "iOS Common";
 			packageProductDependencies = (
 				7886D64D2975BAB900A36158 /* Alamofire */,
+				780B7A9A297B1EC7008E493C /* Swinject */,
 			);
 			productName = "iOS Common";
 			productReference = 783DB62D297550E200AC92B2 /* iOS Common.app */;
@@ -213,6 +222,7 @@
 			mainGroup = 783DB624297550E200AC92B2;
 			packageReferences = (
 				7886D64C2975BAB900A36158 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				780B7A99297B1EC7008E493C /* XCRemoteSwiftPackageReference "Swinject" */,
 			);
 			productRefGroup = 783DB62E297550E200AC92B2 /* Products */;
 			projectDirPath = "";
@@ -262,10 +272,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				780B7A9F297B251D008E493C /* Container.swift in Sources */,
 				780B7A942979D8FF008E493C /* AuthViewModel.swift in Sources */,
 				7886D6432975A10700A36158 /* View+Ext.swift in Sources */,
 				7886D6482975A49800A36158 /* HomeMenuRow.swift in Sources */,
 				7886D64B2975BA6600A36158 /* MoviesScreen.swift in Sources */,
+				780B7A9D297B23D9008E493C /* Inject.swift in Sources */,
 				7886D6512975BB8B00A36158 /* RestFactory.swift in Sources */,
 				780B7A982979F885008E493C /* AuthScreen.swift in Sources */,
 				780B7A962979DBD0008E493C /* AuthService.swift in Sources */,
@@ -478,6 +490,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		780B7A99297B1EC7008E493C /* XCRemoteSwiftPackageReference "Swinject" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/Swinject";
+			requirement = {
+				kind = exactVersion;
+				version = 2.8.3;
+			};
+		};
 		7886D64C2975BAB900A36158 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire";
@@ -489,6 +509,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		780B7A9A297B1EC7008E493C /* Swinject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 780B7A99297B1EC7008E493C /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = Swinject;
+		};
 		7886D64D2975BAB900A36158 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 7886D64C2975BAB900A36158 /* XCRemoteSwiftPackageReference "Alamofire" */;

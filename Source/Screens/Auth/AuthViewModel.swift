@@ -9,11 +9,15 @@ import Combine
 import Foundation
 
 internal class AuthViewModel: ObservableObject {
-    private let service = AuthService()
+    private let service: AuthService
+    private var cancellables = Set<AnyCancellable>()
 
     @Published var auth: Auth?
 
-    private var cancellables = Set<AnyCancellable>()
+    // swiftlint:disable:next force_unwrapping
+    init(service: AuthService = di.resolve(AuthService.self)!) {
+        self.service = service
+    }
 
     func login(username: String, password: String) {
         service.login(username: username, password: password)

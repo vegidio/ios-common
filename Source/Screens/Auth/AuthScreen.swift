@@ -8,15 +8,10 @@
 import SwiftUI
 
 internal struct AuthScreen: View {
-    @StateObject private var viewModel: AuthViewModel
+    @InjectObservedObject var viewModel: AuthViewModel
 
     @State private var username = ""
     @State private var password = ""
-
-    // swiftlint:disable:next force_unwrapping
-    init(viewModel: AuthViewModel = di.resolve(AuthViewModel.self)!) {
-        _viewModel = StateObject(wrappedValue: viewModel)
-    }
 
     var body: some View {
         Form {

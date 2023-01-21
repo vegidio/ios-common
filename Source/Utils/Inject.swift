@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 public protocol Resolver {
     func resolve<T>(_ type: T.Type, name: String?) -> T?
@@ -16,12 +17,9 @@ public enum InjectSettings {
 }
 
 @propertyWrapper
-public struct Inject<T> {
-    public private(set) var wrappedValue: T
-
-    public init() {
-        self.init(name: nil, resolver: nil)
-    }
+public struct InjectObservedObject<T>: DynamicProperty where T: ObservableObject {
+    public var wrappedValue: T
+    public var projectedValue: ObservedObject<T>
 
     public init(name: String? = nil, resolver: Resolver? = nil) {
         guard let resolver = resolver ?? InjectSettings.resolver else {
@@ -33,13 +31,23 @@ public struct Inject<T> {
         }
 
         wrappedValue = value
+        projectedValue = ObservedObject(wrappedValue: value)
     }
+}
 
-    public init<Wrapped>(name: String? = nil, resolver: Resolver? = nil) where T == Wrapped? {
+@propertyWrapper
+public struct Inject<T> {
+    public var wrappedValue: T
+
+    public init(name: String? = nil, resolver: Resolver? = nil) {
         guard let resolver = resolver ?? InjectSettings.resolver else {
             fatalError("Make sure InjectSettings.resolver is set!")
         }
 
-        wrappedValue = resolver.resolve(Wrapped.self, name: name)
+        guard let value = resolver.resolve(T.self, name: name) else {
+            fatalError("Could not resolve non-optional \(T.self)")
+        }
+
+        wrappedValue = value
     }
 }

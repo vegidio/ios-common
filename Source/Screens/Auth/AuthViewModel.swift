@@ -9,10 +9,14 @@ import Combine
 import Foundation
 
 internal class AuthViewModel: ObservableObject {
-    @Inject var service: AuthService
+    private let service: AuthService
     private var cancellables = Set<AnyCancellable>()
 
     @Published var auth: Auth?
+
+    init(service: AuthService) {
+        self.service = service
+    }
 
     func login(username: String, password: String) {
         service.login(username: username, password: password)

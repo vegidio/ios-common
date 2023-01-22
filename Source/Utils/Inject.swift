@@ -17,7 +17,7 @@ public enum InjectSettings {
 }
 
 @propertyWrapper
-public struct InjectObservedObject<T>: DynamicProperty where T: ObservableObject {
+public struct InjectObject<T>: DynamicProperty where T: ObservableObject {
     public var wrappedValue: T
     public var projectedValue: ObservedObject<T>
 

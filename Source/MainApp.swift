@@ -9,10 +9,6 @@ import SwiftUI
 
 @main
 internal struct MainApp: App {
-    init() {
-        InjectSettings.resolver = di
-    }
-
     var body: some Scene {
         WindowGroup {
             HomeScreen()

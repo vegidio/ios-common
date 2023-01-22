@@ -6,12 +6,17 @@
 //
 
 import SwiftUI
+import SwinjectAutoregistration
 
 internal struct AuthScreen: View {
-    @InjectObservedObject var viewModel: AuthViewModel
+    @ObservedObject private var viewModel: AuthViewModel
 
     @State private var username = ""
     @State private var password = ""
+
+    init(viewModel: AuthViewModel = di~>) {
+        self.viewModel = viewModel
+    }
 
     var body: some View {
         Form {

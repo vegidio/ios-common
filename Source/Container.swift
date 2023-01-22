@@ -7,20 +7,19 @@
 
 import Foundation
 import Swinject
-
-extension Container: Resolver {}
+import SwinjectAutoregistration
 
 // swiftlint:disable:next identifier_name
 internal let di: Container = {
     let container = Container()
 
-    // MARK: - ViewModels
-
-    container.register(AuthViewModel.self) { _ in AuthViewModel() }
-
     // MARK: - Services
 
     container.register(AuthService.self) { _ in AuthService() }
+
+    // MARK: - ViewModels
+
+    container.autoregister(AuthViewModel.self, initializer: AuthViewModel.init)
 
     return container
 }()

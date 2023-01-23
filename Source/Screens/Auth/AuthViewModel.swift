@@ -13,22 +13,32 @@ internal class AuthViewModel: ObservableObject {
     private var cancellables = Set<AnyCancellable>()
 
     @Published var auth: Auth?
+    @Published var state = NetworkState.idle
 
     init(service: AuthService) {
         self.service = service
     }
 
     func login(username: String, password: String) {
+        // swiftlint:disable:next trailing_closure
         service.login(username: username, password: password)
+            .handleEvents(receiveSubscription: { _ in self.state = .loading })
             .receive(on: DispatchQueue.main)
             .sink { completion in
                 switch completion {
-                case .finished: print("Finished")
-                case let .failure(error): print("Error: \(error)")
+                case .finished: self.state = .idle
+
+                case let .failure(error):
+                    print(error)
+                    self.state = .error(error: error)
                 }
             } receiveValue: { auth in
                 self.auth = auth
             }
             .store(in: &cancellables)
+    }
+
+    func logout() {
+        auth = nil
     }
 }

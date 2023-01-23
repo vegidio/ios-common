@@ -12,16 +12,19 @@ internal struct User: Codable {
         case id
         case username
         case email
+        case createdAt
     }
 
     var id: Int
     var username: String
     var email: String
+    var createdAt: Date
 
-    init(id: Int, username: String, email: String) {
+    init(id: Int, username: String, email: String, createdAt: Date) {
         self.id = id
         self.username = username
         self.email = email
+        self.createdAt = createdAt
     }
 
     // MARK: - Codable Protocol
@@ -32,6 +35,7 @@ internal struct User: Codable {
         id = try values.decode(Int.self, forKey: .id)
         username = try values.decode(String.self, forKey: .username)
         email = try values.decode(String.self, forKey: .email)
+        createdAt = try values.decode(Date.self, forKey: .createdAt)
     }
 
     func encode(to encoder: Encoder) throws {
@@ -40,5 +44,6 @@ internal struct User: Codable {
         try container.encode(id, forKey: .id)
         try container.encode(username, forKey: .username)
         try container.encode(email, forKey: .email)
+        try container.encode(createdAt, forKey: .createdAt)
     }
 }

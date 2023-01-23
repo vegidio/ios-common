@@ -15,7 +15,15 @@ internal enum RestError: Error {
 }
 
 internal class RestFactory {
+    var encoder = JSONEncoder()
+    var decoder = JSONDecoder()
+
     private let queue = DispatchQueue.global(qos: .background)
+
+    init() {
+        encoder.dateEncodingStrategy = .iso8601
+        decoder.dateDecodingStrategy = .iso8601Complete
+    }
 
     func sendRequest<T: Codable>(
         _ method: HTTPMethod,
@@ -27,9 +35,9 @@ internal class RestFactory {
             return Fail<T, RestError>(error: .invalidUrl).eraseToAnyPublisher()
         }
 
-        let enconder = getParameterEncoder(method)
-        return AF.request(url, method: method, parameters: params, encoder: enconder, headers: headers)
-            .publishDecodable(type: T.self, queue: queue)
+        let paramEncoder = getParameterEncoder(method)
+        return AF.request(url, method: method, parameters: params, encoder: paramEncoder, headers: headers)
+            .publishDecodable(type: T.self, queue: queue, decoder: decoder)
             .value()
             .mapError { error in RestError.unknown(message: error.localizedDescription) }
             .eraseToAnyPublisher()

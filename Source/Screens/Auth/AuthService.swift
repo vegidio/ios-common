@@ -9,10 +9,10 @@ import Combine
 import Foundation
 
 internal class AuthService: RestFactory {
-    private let baseUrl = "https://movies.vinicius.io"
+    private let baseUrl = "https://movies.vinicius.io/api"
 
     func login(username: String, password: String) -> AnyPublisher<Auth, RestError> {
-        let url = "\(baseUrl)/api/auth/local"
+        let url = "\(baseUrl)/auth/local"
 
         let params = [
             "identifier": username,

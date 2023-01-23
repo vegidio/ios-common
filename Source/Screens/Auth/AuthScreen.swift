@@ -8,6 +8,29 @@
 import SwiftUI
 import SwinjectAutoregistration
 
+private struct UserInfo: View {
+    let auth: Auth
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 10) {
+            HStack {
+                Text("Username:").bold()
+                Text(auth.user.username)
+            }
+
+            HStack {
+                Text("E-mail:").bold()
+                Text(auth.user.email)
+            }
+
+            HStack(alignment: .top) {
+                Text("JWT:").bold()
+                Text(auth.jwt)
+            }
+        }
+    }
+}
+
 internal struct AuthScreen: View {
     @ObservedObject private var viewModel: AuthViewModel
 
@@ -31,10 +54,18 @@ internal struct AuthScreen: View {
                     viewModel.login(username: username, password: password)
                 }
                 .frame(maxWidth: .infinity)
+                .disabled(username.isEmpty || password.isEmpty)
             }
 
-            Section(header: Text("Current User")) {
-                Text(viewModel.auth?.jwt ?? "---")
+            if let auth = viewModel.auth {
+                Section(header: Text("Current User")) {
+                    UserInfo(auth: auth)
+
+                    Button("Logout") {
+                        viewModel.logout()
+                    }
+                    .frame(maxWidth: .infinity)
+                }
             }
         }
         .onAppear {

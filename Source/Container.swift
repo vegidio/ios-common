@@ -20,6 +20,7 @@ internal let di: Container = {
     // MARK: - ViewModels
 
     container.autoregister(AuthViewModel.self, initializer: AuthViewModel.init)
+        .inObjectScope(.container)
 
     return container
 }()

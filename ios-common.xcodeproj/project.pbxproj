@@ -16,6 +16,8 @@
 		780B7A9D297B23D9008E493C /* Inject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780B7A9C297B23D9008E493C /* Inject.swift */; };
 		780B7A9F297B251D008E493C /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780B7A9E297B251D008E493C /* Container.swift */; };
 		780B7AA2297D06FE008E493C /* SwinjectAutoregistration in Frameworks */ = {isa = PBXBuildFile; productRef = 780B7AA1297D06FE008E493C /* SwinjectAutoregistration */; };
+		7835248B297F1F9C00246EB1 /* NetworkState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7835248A297F1F9C00246EB1 /* NetworkState.swift */; };
+		7835248E297F29C400246EB1 /* DateDecodingStrategy+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7835248D297F29C400246EB1 /* DateDecodingStrategy+Ext.swift */; };
 		783DB631297550E200AC92B2 /* MainApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783DB630297550E200AC92B2 /* MainApp.swift */; };
 		783DB635297550E200AC92B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 783DB634297550E200AC92B2 /* Assets.xcassets */; };
 		783DB638297550E200AC92B2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 783DB637297550E200AC92B2 /* Preview Assets.xcassets */; };
@@ -36,6 +38,8 @@
 		780B7A972979F885008E493C /* AuthScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthScreen.swift; sourceTree = "<group>"; };
 		780B7A9C297B23D9008E493C /* Inject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inject.swift; sourceTree = "<group>"; };
 		780B7A9E297B251D008E493C /* Container.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
+		7835248A297F1F9C00246EB1 /* NetworkState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkState.swift; sourceTree = "<group>"; };
+		7835248D297F29C400246EB1 /* DateDecodingStrategy+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateDecodingStrategy+Ext.swift"; sourceTree = "<group>"; };
 		783DB62D297550E200AC92B2 /* iOS Common.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS Common.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		783DB630297550E200AC92B2 /* MainApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainApp.swift; sourceTree = "<group>"; };
 		783DB634297550E200AC92B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -62,23 +66,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		780B7A8D2979D1E7008E493C /* Models */ = {
+		780B7A922979D8ED008E493C /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				7835248C297F277900246EB1 /* Models */,
+				780B7A972979F885008E493C /* AuthScreen.swift */,
+				780B7A952979DBD0008E493C /* AuthService.swift */,
+				780B7A932979D8FF008E493C /* AuthViewModel.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		7835248C297F277900246EB1 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				780B7A902979D78F008E493C /* Auth.swift */,
 				780B7A8E2979D3DF008E493C /* User.swift */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		780B7A922979D8ED008E493C /* Auth */ = {
-			isa = PBXGroup;
-			children = (
-				780B7A972979F885008E493C /* AuthScreen.swift */,
-				780B7A952979DBD0008E493C /* AuthService.swift */,
-				780B7A932979D8FF008E493C /* AuthViewModel.swift */,
-			);
-			path = Auth;
 			sourceTree = "<group>";
 		};
 		783DB624297550E200AC92B2 = {
@@ -101,7 +106,6 @@
 			isa = PBXGroup;
 			children = (
 				7886D6412975A0EA00A36158 /* Extensions */,
-				780B7A8D2979D1E7008E493C /* Models */,
 				7886D63D29759E8F00A36158 /* Screens */,
 				7886D6442975A16E00A36158 /* Shared */,
 				7886D64F2975BB6F00A36158 /* Utils */,
@@ -143,6 +147,7 @@
 		7886D6412975A0EA00A36158 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				7835248D297F29C400246EB1 /* DateDecodingStrategy+Ext.swift */,
 				7886D6422975A10700A36158 /* View+Ext.swift */,
 			);
 			path = Extensions;
@@ -152,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				7886D6452975A18400A36158 /* LazyView.swift */,
+				7835248A297F1F9C00246EB1 /* NetworkState.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -283,8 +289,10 @@
 				7886D64B2975BA6600A36158 /* MoviesScreen.swift in Sources */,
 				780B7A9D297B23D9008E493C /* Inject.swift in Sources */,
 				7886D6512975BB8B00A36158 /* RestFactory.swift in Sources */,
+				7835248E297F29C400246EB1 /* DateDecodingStrategy+Ext.swift in Sources */,
 				780B7A982979F885008E493C /* AuthScreen.swift in Sources */,
 				780B7A962979DBD0008E493C /* AuthService.swift in Sources */,
+				7835248B297F1F9C00246EB1 /* NetworkState.swift in Sources */,
 				780B7A8F2979D3DF008E493C /* User.swift in Sources */,
 				783DB631297550E200AC92B2 /* MainApp.swift in Sources */,
 				7886D6462975A18400A36158 /* LazyView.swift in Sources */,

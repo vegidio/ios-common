@@ -10,5 +10,5 @@ import Foundation
 internal enum NetworkState {
     case idle
     case loading
-    case error(error: Error? = nil)
+    case error(Error?)
 }

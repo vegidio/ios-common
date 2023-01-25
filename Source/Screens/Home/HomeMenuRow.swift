@@ -21,7 +21,7 @@ internal struct HomeMenuRow: View {
 
 internal struct HomeMenuRow_Previews: PreviewProvider {
     static var previews: some View {
-        let menuOption = MenuOption(title: "Vinicius", destination: EmptyView().toAnyView())
+        let menuOption = MenuOption(id: .auth, title: "Auth")
         HomeMenuRow(menuOption: menuOption)
     }
 }

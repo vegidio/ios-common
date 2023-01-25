@@ -9,11 +9,11 @@ import Combine
 import Foundation
 
 internal class AuthViewModel: ObservableObject {
-    private let service: AuthService
-    private var cancellables = Set<AnyCancellable>()
-
     @Published var auth: Auth?
     @Published var state = NetworkState.idle
+
+    private let service: AuthService
+    private var cancellables = Set<AnyCancellable>()
 
     init(service: AuthService) {
         self.service = service
@@ -30,7 +30,7 @@ internal class AuthViewModel: ObservableObject {
 
                 case let .failure(error):
                     print(error)
-                    self.state = .error(error: error)
+                    self.state = .error(error)
                 }
             } receiveValue: { auth in
                 self.auth = auth

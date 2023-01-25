@@ -8,7 +8,7 @@
 import SwiftUI
 
 /// Lazily initialize a view, allocation its dependencies when a view is presented for the first time. Useful with
-/// NavigationLink.
+/// NavigationStack.
 public struct LazyView<Content: View>: View {
     private let build: () -> Content
 
@@ -16,7 +16,7 @@ public struct LazyView<Content: View>: View {
         build()
     }
 
-    init(_ build: @autoclosure @escaping () -> Content) {
+    init(@ViewBuilder _ build: @escaping () -> Content) {
         self.build = build
     }
 }

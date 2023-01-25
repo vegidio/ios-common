@@ -21,8 +21,9 @@
 		783DB631297550E200AC92B2 /* MainApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783DB630297550E200AC92B2 /* MainApp.swift */; };
 		783DB635297550E200AC92B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 783DB634297550E200AC92B2 /* Assets.xcassets */; };
 		783DB638297550E200AC92B2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 783DB637297550E200AC92B2 /* Preview Assets.xcassets */; };
+		786EEE302980420E009B53C2 /* HomeAuthStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786EEE2F2980420D009B53C2 /* HomeAuthStatus.swift */; };
+		786EEE3229805A46009B53C2 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786EEE3129805A46009B53C2 /* Router.swift */; };
 		7886D64029759EBD00A36158 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7886D63F29759EBD00A36158 /* HomeScreen.swift */; };
-		7886D6432975A10700A36158 /* View+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7886D6422975A10700A36158 /* View+Ext.swift */; };
 		7886D6462975A18400A36158 /* LazyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7886D6452975A18400A36158 /* LazyView.swift */; };
 		7886D6482975A49800A36158 /* HomeMenuRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7886D6472975A49800A36158 /* HomeMenuRow.swift */; };
 		7886D64B2975BA6600A36158 /* MoviesScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7886D64A2975BA6600A36158 /* MoviesScreen.swift */; };
@@ -44,8 +45,9 @@
 		783DB630297550E200AC92B2 /* MainApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainApp.swift; sourceTree = "<group>"; };
 		783DB634297550E200AC92B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		783DB637297550E200AC92B2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		786EEE2F2980420D009B53C2 /* HomeAuthStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAuthStatus.swift; sourceTree = "<group>"; };
+		786EEE3129805A46009B53C2 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		7886D63F29759EBD00A36158 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
-		7886D6422975A10700A36158 /* View+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Ext.swift"; sourceTree = "<group>"; };
 		7886D6452975A18400A36158 /* LazyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyView.swift; sourceTree = "<group>"; };
 		7886D6472975A49800A36158 /* HomeMenuRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMenuRow.swift; sourceTree = "<group>"; };
 		7886D64A2975BA6600A36158 /* MoviesScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesScreen.swift; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 		7886D63E29759EA400A36158 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				786EEE2F2980420D009B53C2 /* HomeAuthStatus.swift */,
 				7886D6472975A49800A36158 /* HomeMenuRow.swift */,
 				7886D63F29759EBD00A36158 /* HomeScreen.swift */,
 			);
@@ -148,7 +151,6 @@
 			isa = PBXGroup;
 			children = (
 				7835248D297F29C400246EB1 /* DateDecodingStrategy+Ext.swift */,
-				7886D6422975A10700A36158 /* View+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -158,6 +160,7 @@
 			children = (
 				7886D6452975A18400A36158 /* LazyView.swift */,
 				7835248A297F1F9C00246EB1 /* NetworkState.swift */,
+				786EEE3129805A46009B53C2 /* Router.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -282,9 +285,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				786EEE3229805A46009B53C2 /* Router.swift in Sources */,
 				780B7A9F297B251D008E493C /* Container.swift in Sources */,
 				780B7A942979D8FF008E493C /* AuthViewModel.swift in Sources */,
-				7886D6432975A10700A36158 /* View+Ext.swift in Sources */,
 				7886D6482975A49800A36158 /* HomeMenuRow.swift in Sources */,
 				7886D64B2975BA6600A36158 /* MoviesScreen.swift in Sources */,
 				780B7A9D297B23D9008E493C /* Inject.swift in Sources */,
@@ -298,6 +301,7 @@
 				7886D6462975A18400A36158 /* LazyView.swift in Sources */,
 				7886D64029759EBD00A36158 /* HomeScreen.swift in Sources */,
 				780B7A912979D78F008E493C /* Auth.swift in Sources */,
+				786EEE302980420E009B53C2 /* HomeAuthStatus.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

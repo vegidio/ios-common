@@ -6,29 +6,42 @@
 //
 
 import SwiftUI
+import SwinjectAutoregistration
 
 internal struct MenuOption: Identifiable {
-    let id = UUID()
-    var title: String
-    var destination: AnyView
+    let id: Destination
+    let title: String
 }
 
 internal struct HomeScreen: View {
+    @EnvironmentObject private var router: Router
+    @ObservedObject private var viewModel: AuthViewModel
+
     private let menuOptions = [
-        MenuOption(title: "Auth", destination: LazyView(AuthScreen()).toAnyView()),
-        MenuOption(title: "Movies", destination: LazyView(MoviesScreen()).toAnyView()),
-        MenuOption(title: "Actors", destination: EmptyView().toAnyView()),
-        MenuOption(title: "Genres", destination: EmptyView().toAnyView())
+        MenuOption(id: .movies, title: "Movies"),
+        MenuOption(id: .actors, title: "Actors"),
+        MenuOption(id: .genres, title: "Genres")
     ]
 
+    init(viewModel: AuthViewModel = di~>) {
+        self.viewModel = viewModel
+    }
+
     var body: some View {
-        NavigationView {
-            List(menuOptions) { option in
-                NavigationLink(destination: option.destination) {
-                    HomeMenuRow(menuOption: option)
+        VStack {
+            NavigationStack(path: $router.navPath) {
+                List(menuOptions) { option in
+                    NavigationLink(destination: option.id.view) {
+                        HomeMenuRow(menuOption: option)
+                    }
                 }
+                .navigationDestination(for: Destination.self) { id in
+                    id.view
+                }
+                .navigationTitle("Home")
             }
-            .navigationTitle("Home")
+
+            HomeAuthStatus(auth: viewModel.auth)
         }
     }
 }

@@ -11,7 +11,7 @@ import Foundation
 
 internal enum RestError: Error {
     case invalidUrl
-    case unknown(message: String)
+    case unknown(String)
 }
 
 internal class RestFactory {
@@ -25,6 +25,27 @@ internal class RestFactory {
         decoder.dateDecodingStrategy = .iso8601Complete
     }
 
+    /// Sends a request that doesn't expect a response body
+    func sendRequest(
+        _ method: HTTPMethod,
+        _ uri: String,
+        params: (some Encodable)? = nil,
+        headers: HTTPHeaders? = nil
+    ) -> AnyPublisher<Void, RestError> {
+        guard let url = URL(string: uri) else {
+            return Fail<Void, RestError>(error: .invalidUrl).eraseToAnyPublisher()
+        }
+
+        let paramEncoder = getParameterEncoder(method)
+        return AF.request(url, method: method, parameters: params, encoder: paramEncoder, headers: headers)
+            .publishUnserialized(queue: queue)
+            .value()
+            .map { _ in }
+            .mapError { RestError.unknown($0.localizedDescription) }
+            .eraseToAnyPublisher()
+    }
+
+    /// Sends a requests that expects a response body
     func sendRequest<T: Codable>(
         _ method: HTTPMethod,
         _ uri: String,
@@ -39,7 +60,7 @@ internal class RestFactory {
         return AF.request(url, method: method, parameters: params, encoder: paramEncoder, headers: headers)
             .publishDecodable(type: T.self, queue: queue, decoder: decoder)
             .value()
-            .mapError { error in RestError.unknown(message: error.localizedDescription) }
+            .mapError { RestError.unknown($0.localizedDescription) }
             .eraseToAnyPublisher()
     }
 

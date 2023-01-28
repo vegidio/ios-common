@@ -15,14 +15,26 @@ internal enum RestError: Error {
 }
 
 internal class RestFactory {
-    var encoder = JSONEncoder()
-    var decoder = JSONDecoder()
-
+    private let baseUrl: URL
+    private let encoder: JSONEncoder
+    private let decoder: JSONDecoder
     private let queue = DispatchQueue.global(qos: .background)
 
-    init() {
+    init(
+        baseUrl: String,
+        encoder: JSONEncoder = JSONEncoder(),
+        decoder: JSONDecoder = JSONDecoder()
+    ) {
+        guard let url = URL(string: baseUrl) else {
+            fatalError("The base URL is invalid.")
+        }
+
         encoder.dateEncodingStrategy = .iso8601
         decoder.dateDecodingStrategy = .iso8601Complete
+
+        self.baseUrl = url
+        self.encoder = encoder
+        self.decoder = decoder
     }
 
     /// Sends a request that doesn't expect a response body
@@ -32,11 +44,9 @@ internal class RestFactory {
         params: (some Encodable)? = nil,
         headers: HTTPHeaders? = nil
     ) -> AnyPublisher<Void, RestError> {
-        guard let url = URL(string: uri) else {
-            return Fail<Void, RestError>(error: .invalidUrl).eraseToAnyPublisher()
-        }
-
+        let url = baseUrl.appendingPathComponent(uri)
         let paramEncoder = getParameterEncoder(method)
+
         return AF.request(url, method: method, parameters: params, encoder: paramEncoder, headers: headers)
             .publishUnserialized(queue: queue)
             .value()
@@ -52,11 +62,9 @@ internal class RestFactory {
         params: (some Encodable)? = nil,
         headers: HTTPHeaders? = nil
     ) -> AnyPublisher<T, RestError> {
-        guard let url = URL(string: uri) else {
-            return Fail<T, RestError>(error: .invalidUrl).eraseToAnyPublisher()
-        }
-
+        let url = baseUrl.appendingPathComponent(uri)
         let paramEncoder = getParameterEncoder(method)
+
         return AF.request(url, method: method, parameters: params, encoder: paramEncoder, headers: headers)
             .publishDecodable(type: T.self, queue: queue, decoder: decoder)
             .value()

@@ -8,24 +8,19 @@
 import SwiftUI
 import SwinjectAutoregistration
 
-private struct UserInfo: View {
-    let auth: Auth
+private struct TokenInfo: View {
+    let token: Token
 
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
             HStack {
-                Text("Username:").bold()
-                Text(auth.user.username)
+                Text("Access Token:").bold()
+                Text(token.accessToken)
             }
 
             HStack {
-                Text("E-mail:").bold()
-                Text(auth.user.email)
-            }
-
-            HStack(alignment: .top) {
-                Text("JWT:").bold()
-                Text(auth.jwt)
+                Text("Refresh Token:").bold()
+                Text(token.refreshToken)
             }
         }
     }
@@ -34,7 +29,7 @@ private struct UserInfo: View {
 internal struct AuthScreen: View {
     @ObservedObject private var viewModel: AuthViewModel
 
-    @State private var username = ""
+    @State private var email = ""
     @State private var password = ""
 
     init(viewModel: AuthViewModel = di~>) {
@@ -44,22 +39,22 @@ internal struct AuthScreen: View {
     var body: some View {
         Form {
             Section(header: Text("Credentials")) {
-                TextField("Username", text: $username)
+                TextField("E-mail", text: $email)
                     .textInputAutocapitalization(.never)
                     .autocorrectionDisabled(true)
 
                 SecureField("Password", text: $password)
 
                 Button("Login") {
-                    viewModel.login(username: username, password: password)
+                    viewModel.login(email: email, password: password)
                 }
                 .frame(maxWidth: .infinity)
-                .disabled(username.isEmpty || password.isEmpty)
+                .disabled(email.isEmpty || password.isEmpty)
             }
 
-            if let auth = viewModel.auth {
+            if let token = viewModel.token {
                 Section(header: Text("Current User")) {
-                    UserInfo(auth: auth)
+                    TokenInfo(token: token)
 
                     Button("Logout") {
                         viewModel.logout()

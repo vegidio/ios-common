@@ -22,7 +22,6 @@ opt_in_rules:
   - comment_spacing
   - compiler_protocol_init
   - computed_accessors_order
-  - conditional_returns_on_newline
   - contains_over_filter_count
   - contains_over_filter_is_empty
   - contains_over_first_not_nil
@@ -207,6 +206,7 @@ opt_in_rules:
   - xctfail_message
   - yoda_condition
 disabled_rules:
+  - conditional_returns_on_newline
   - explicit_acl
   - explicit_type_interface
   - force_try

@@ -15,7 +15,9 @@ internal let di: Container = {
 
     // MARK: - Services
 
-    container.register(AuthService.self) { _ in AuthService() }
+    container.register(CountriesService.self) { _ in
+        CountriesService(baseUrl: "https://countries.vinicius.io/api")
+    }
 
     // MARK: - ViewModels
 

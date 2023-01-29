@@ -9,20 +9,21 @@ import Combine
 import Foundation
 
 internal class AuthViewModel: ObservableObject {
-    @Published var auth: Auth?
+    @Published var token: Token?
     @Published var state = NetworkState.idle
 
-    private let service: AuthService
+    private let service: CountriesService
     private var cancellables = Set<AnyCancellable>()
 
-    init(service: AuthService) {
+    init(service: CountriesService) {
         self.service = service
     }
 
-    func login(username: String, password: String) {
+    func login(email: String, password: String) {
         // swiftlint:disable:next trailing_closure
-        service.login(username: username, password: password)
+        service.login(email: email, password: password)
             .handleEvents(receiveSubscription: { _ in self.state = .loading })
+            .map { $0.data }
             .receive(on: DispatchQueue.main)
             .sink { completion in
                 switch completion {
@@ -32,13 +33,13 @@ internal class AuthViewModel: ObservableObject {
                     print(error)
                     self.state = .error(error)
                 }
-            } receiveValue: { auth in
-                self.auth = auth
+            } receiveValue: { token in
+                self.token = token
             }
             .store(in: &cancellables)
     }
 
     func logout() {
-        auth = nil
+        token = nil
     }
 }

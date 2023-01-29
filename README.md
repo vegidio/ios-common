@@ -12,9 +12,16 @@ I used a set of well-known Android libraries so we don't have to reinvent the wh
 
 * __Alamofire:__ to make HTTP requests and process the responses.
 
-## Classes
+## 🛠️ Build
 
-* `interface/Callback` - a generic callback interface using class templates.
+Before building the project you must use code generator to update the Swift code with the GraphQL schema:
+
+1. Install the CLI tool by right-clicking the project and selecting "Install CLI".
+2. Run this command in the project root folder:
+
+```
+$ ./apollo-ios-cli generate
+```
 
 ## 🎨 Code Correctness
 

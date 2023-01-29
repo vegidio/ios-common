@@ -1,0 +1,6 @@
+mutation signIn($dto: SignInRequestDto!) {
+    signIn(dto: $dto) {
+        accessToken
+        refreshToken
+    }
+}

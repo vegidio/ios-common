@@ -1,5 +1,7 @@
 included:
   - Source
+excluded:
+  - Source/GraphQL
 opt_in_rules:
   - accessibility_label_for_image
   - accessibility_trait_for_button

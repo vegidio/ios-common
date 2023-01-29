@@ -61,6 +61,7 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
-# IntelliJ
+# Others
 .build
 .idea
+apollo-ios-cli

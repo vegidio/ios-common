@@ -17,8 +17,6 @@ internal struct HomeScreen: View {
     @EnvironmentObject private var router: Router
     @ObservedObject private var viewModel: AuthViewModel
 
-    let graphql = GraphqlFactory(url: "https://movies.vinicius.io/graphql")
-
     private let menuOptions = [
         MenuOption(id: .movies, title: "Movies"),
         MenuOption(id: .actors, title: "Actors"),

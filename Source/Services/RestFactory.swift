@@ -9,11 +9,6 @@ import Alamofire
 import Combine
 import Foundation
 
-internal enum RestError: Error {
-    case invalidUrl
-    case unknown(String)
-}
-
 internal class RestFactory {
     private let baseUrl: URL
     private let encoder: JSONEncoder
@@ -43,7 +38,7 @@ internal class RestFactory {
         _ uri: String,
         params: (some Encodable)? = nil,
         headers: HTTPHeaders? = nil
-    ) -> AnyPublisher<Void, RestError> {
+    ) -> AnyPublisher<Void, ApiError> {
         let url = baseUrl.appendingPathComponent(uri)
         let paramEncoder = getParameterEncoder(method)
 
@@ -51,7 +46,7 @@ internal class RestFactory {
             .publishUnserialized(queue: queue)
             .value()
             .map { _ in }
-            .mapError { RestError.unknown($0.localizedDescription) }
+            .mapError { ApiError.unknown($0.localizedDescription) }
             .eraseToAnyPublisher()
     }
 
@@ -61,14 +56,14 @@ internal class RestFactory {
         _ uri: String,
         params: (some Encodable)? = nil,
         headers: HTTPHeaders? = nil
-    ) -> AnyPublisher<T, RestError> {
+    ) -> AnyPublisher<T, ApiError> {
         let url = baseUrl.appendingPathComponent(uri)
         let paramEncoder = getParameterEncoder(method)
 
         return AF.request(url, method: method, parameters: params, encoder: paramEncoder, headers: headers)
             .publishDecodable(type: T.self, queue: queue, decoder: decoder)
             .value()
-            .mapError { RestError.unknown($0.localizedDescription) }
+            .mapError { ApiError.unknown($0.localizedDescription) }
             .eraseToAnyPublisher()
     }
 

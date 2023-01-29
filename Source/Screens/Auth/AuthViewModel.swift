@@ -12,10 +12,10 @@ internal class AuthViewModel: ObservableObject {
     @Published var token: Token?
     @Published var state = NetworkState.idle
 
-    private let service: CountriesService
+    private let service: CountriesRestService
     private var cancellables = Set<AnyCancellable>()
 
-    init(service: CountriesService) {
+    init(service: CountriesRestService) {
         self.service = service
     }
 
@@ -23,7 +23,7 @@ internal class AuthViewModel: ObservableObject {
         // swiftlint:disable:next trailing_closure
         service.login(email: email, password: password)
             .handleEvents(receiveSubscription: { _ in self.state = .loading })
-            .map { $0.data }
+            .map(\.data)
             .receive(on: DispatchQueue.main)
             .sink { completion in
                 switch completion {

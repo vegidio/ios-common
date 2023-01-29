@@ -16,4 +16,8 @@ internal class CountriesGraphqlService: GraphqlFactory, CountriesService {
         ))
         return sendMutation(mutation: mutation)
     }
+
+    func me() -> AnyPublisher<Response<User>, ApiError> {
+        Empty().eraseToAnyPublisher()
+    }
 }

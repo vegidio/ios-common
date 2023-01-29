@@ -18,9 +18,9 @@ internal struct HomeScreen: View {
     @ObservedObject private var viewModel: AuthViewModel
 
     private let menuOptions = [
-        MenuOption(id: .movies, title: "Movies"),
-        MenuOption(id: .actors, title: "Actors"),
-        MenuOption(id: .genres, title: "Genres")
+        MenuOption(id: .user, title: "Me"),
+        MenuOption(id: .countryByCode, title: "Country By Code"),
+        MenuOption(id: .countries, title: "Countries")
     ]
 
     init(viewModel: AuthViewModel = di~>) {

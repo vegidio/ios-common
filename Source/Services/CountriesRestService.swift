@@ -16,4 +16,8 @@ internal class CountriesRestService: RestFactory, CountriesService {
         ]
         return sendRequest(.post, "v1/auth/signin", params: params)
     }
+
+    func me() -> AnyPublisher<Response<User>, ApiError> {
+        sendRequest(.get, "v1/users/me", params: "")
+    }
 }

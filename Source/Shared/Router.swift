@@ -10,15 +10,15 @@ import SwiftUI
 
 internal enum Destination: Codable {
     case auth
-    case movies
-    case actors
-    case genres
+    case user
+    case countryByCode
+    case countries
 
     @ViewBuilder
     var view: some View {
         switch self {
         case .auth: LazyView { AuthScreen() }
-        case .movies: LazyView { MoviesScreen() }
+        case .user: LazyView { UserScreen() }
         default: EmptyView()
         }
     }

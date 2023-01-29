@@ -25,7 +25,7 @@
 		7886D64029759EBD00A36158 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7886D63F29759EBD00A36158 /* HomeScreen.swift */; };
 		7886D6462975A18400A36158 /* LazyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7886D6452975A18400A36158 /* LazyView.swift */; };
 		7886D6482975A49800A36158 /* HomeMenuRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7886D6472975A49800A36158 /* HomeMenuRow.swift */; };
-		7886D64B2975BA6600A36158 /* MoviesScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7886D64A2975BA6600A36158 /* MoviesScreen.swift */; };
+		7886D64B2975BA6600A36158 /* UserScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7886D64A2975BA6600A36158 /* UserScreen.swift */; };
 		7886D64E2975BAB900A36158 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 7886D64D2975BAB900A36158 /* Alamofire */; };
 		7886D6512975BB8B00A36158 /* RestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7886D6502975BB8B00A36158 /* RestFactory.swift */; };
 		7898B0D329866BB900FDF65F /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7898B0D229866BB900FDF65F /* Token.swift */; };
@@ -40,6 +40,7 @@
 		7898B0EB29867CE600FDF65F /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7898B0EA29867CE600FDF65F /* ApiError.swift */; };
 		7898B0ED2986AA5B00FDF65F /* CountriesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7898B0EC2986AA5B00FDF65F /* CountriesService.swift */; };
 		7898B0EF2986ACFF00FDF65F /* CountriesGraphqlService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7898B0EE2986ACFF00FDF65F /* CountriesGraphqlService.swift */; };
+		7898B0F12986D94900FDF65F /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7898B0F02986D94900FDF65F /* UserViewModel.swift */; };
 		78B3BE4F29856CE100C538E2 /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = 78B3BE4E29856CE100C538E2 /* Apollo */; };
 		78B3BE6629856F5E00C538E2 /* schema.graphqls in Resources */ = {isa = PBXBuildFile; fileRef = 78B3BE5629856F5E00C538E2 /* schema.graphqls */; };
 		78B3BE7029856F5E00C538E2 /* operations.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 78B3BE6529856F5E00C538E2 /* operations.graphql */; };
@@ -64,7 +65,7 @@
 		7886D63F29759EBD00A36158 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		7886D6452975A18400A36158 /* LazyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyView.swift; sourceTree = "<group>"; };
 		7886D6472975A49800A36158 /* HomeMenuRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMenuRow.swift; sourceTree = "<group>"; };
-		7886D64A2975BA6600A36158 /* MoviesScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesScreen.swift; sourceTree = "<group>"; };
+		7886D64A2975BA6600A36158 /* UserScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserScreen.swift; sourceTree = "<group>"; };
 		7886D6502975BB8B00A36158 /* RestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestFactory.swift; sourceTree = "<group>"; };
 		7898B0D229866BB900FDF65F /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		7898B0D52986713D00FDF65F /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
@@ -78,6 +79,7 @@
 		7898B0EA29867CE600FDF65F /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
 		7898B0EC2986AA5B00FDF65F /* CountriesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesService.swift; sourceTree = "<group>"; };
 		7898B0EE2986ACFF00FDF65F /* CountriesGraphqlService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesGraphqlService.swift; sourceTree = "<group>"; };
+		7898B0F02986D94900FDF65F /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		78B3BE5629856F5E00C538E2 /* schema.graphqls */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = schema.graphqls; sourceTree = "<group>"; };
 		78B3BE6529856F5E00C538E2 /* operations.graphql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = operations.graphql; sourceTree = "<group>"; };
 		78B3BE712985748E00C538E2 /* GraphqlFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphqlFactory.swift; sourceTree = "<group>"; };
@@ -164,7 +166,7 @@
 			children = (
 				780B7A922979D8ED008E493C /* Auth */,
 				7886D63E29759EA400A36158 /* Home */,
-				7886D6492975BA4300A36158 /* Movies */,
+				7886D6492975BA4300A36158 /* User */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -172,9 +174,9 @@
 		7886D63E29759EA400A36158 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				7886D63F29759EBD00A36158 /* HomeScreen.swift */,
 				786EEE2F2980420D009B53C2 /* HomeAuthStatus.swift */,
 				7886D6472975A49800A36158 /* HomeMenuRow.swift */,
-				7886D63F29759EBD00A36158 /* HomeScreen.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -196,12 +198,13 @@
 			path = Shared;
 			sourceTree = "<group>";
 		};
-		7886D6492975BA4300A36158 /* Movies */ = {
+		7886D6492975BA4300A36158 /* User */ = {
 			isa = PBXGroup;
 			children = (
-				7886D64A2975BA6600A36158 /* MoviesScreen.swift */,
+				7886D64A2975BA6600A36158 /* UserScreen.swift */,
+				7898B0F02986D94900FDF65F /* UserViewModel.swift */,
 			);
-			path = Movies;
+			path = User;
 			sourceTree = "<group>";
 		};
 		7886D64F2975BB6F00A36158 /* Utils */ = {
@@ -393,7 +396,7 @@
 				780B7A9F297B251D008E493C /* Container.swift in Sources */,
 				780B7A942979D8FF008E493C /* AuthViewModel.swift in Sources */,
 				7886D6482975A49800A36158 /* HomeMenuRow.swift in Sources */,
-				7886D64B2975BA6600A36158 /* MoviesScreen.swift in Sources */,
+				7886D64B2975BA6600A36158 /* UserScreen.swift in Sources */,
 				7898B0E52986771900FDF65F /* SchemaConfiguration.swift in Sources */,
 				7898B0E62986771900FDF65F /* SignInRequestDto.graphql.swift in Sources */,
 				780B7A9D297B23D9008E493C /* Inject.swift in Sources */,
@@ -402,6 +405,7 @@
 				780B7A982979F885008E493C /* AuthScreen.swift in Sources */,
 				7898B0E82986771900FDF65F /* SignInMutation.graphql.swift in Sources */,
 				7898B0E92986771900FDF65F /* Countries.graphql.swift in Sources */,
+				7898B0F12986D94900FDF65F /* UserViewModel.swift in Sources */,
 				7898B0E42986771900FDF65F /* TokenResponseDto.graphql.swift in Sources */,
 				7898B0D329866BB900FDF65F /* Token.swift in Sources */,
 				7898B0E72986771900FDF65F /* SchemaMetadata.graphql.swift in Sources */,

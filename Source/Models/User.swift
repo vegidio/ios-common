@@ -10,22 +10,15 @@ import Foundation
 internal struct User: Codable {
     enum CodingKeys: CodingKey {
         case id
+        case name
         case username
         case email
-        case createdAt
     }
 
     var id: Int
+    var name: String
     var username: String
     var email: String
-    var createdAt: Date?
-
-    init(id: Int, username: String, email: String, createdAt: Date) {
-        self.id = id
-        self.username = username
-        self.email = email
-        self.createdAt = createdAt
-    }
 
     // MARK: - Codable Protocol
 
@@ -33,17 +26,17 @@ internal struct User: Codable {
         let values = try decoder.container(keyedBy: CodingKeys.self)
 
         id = try values.decode(Int.self, forKey: .id)
+        name = try values.decode(String.self, forKey: .name)
         username = try values.decode(String.self, forKey: .username)
         email = try values.decode(String.self, forKey: .email)
-        createdAt = try values.decodeIfPresent(Date.self, forKey: .createdAt)
     }
 
     func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: CodingKeys.self)
 
         try container.encode(id, forKey: .id)
+        try container.encode(name, forKey: .name)
         try container.encode(username, forKey: .username)
         try container.encode(email, forKey: .email)
-        try container.encodeIfPresent(createdAt, forKey: .createdAt)
     }
 }

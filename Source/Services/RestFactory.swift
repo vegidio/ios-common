@@ -21,7 +21,7 @@ internal class RestFactory {
         decoder: JSONDecoder = JSONDecoder()
     ) {
         guard let url = URL(string: baseUrl) else {
-            fatalError("The base URL is invalid.")
+            fatalError("The REST base URL is invalid.")
         }
 
         encoder.dateEncodingStrategy = .iso8601

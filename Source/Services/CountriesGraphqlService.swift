@@ -14,8 +14,6 @@ internal class CountriesGraphqlService: GraphqlFactory, CountriesService {
             email: email,
             password: password
         ))
-        return sendMutation(mutation: mutation, type: Token.self)
-            .map { Response(data: $0) }
-            .eraseToAnyPublisher()
+        return sendMutation(mutation: mutation)
     }
 }

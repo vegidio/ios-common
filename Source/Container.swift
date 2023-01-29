@@ -15,14 +15,20 @@ internal let di: Container = {
 
     // MARK: - Services
 
-    container.register(CountriesRestService.self) { _ in
+    container.register(CountriesService.self, name: "restCountries") { _ in
         CountriesRestService(baseUrl: "https://countries.vinicius.io/api")
+    }
+
+    container.register(CountriesService.self, name: "graphqlCountries") { _ in
+        CountriesGraphqlService(url: "https://countries.vinicius.io/graphql")
     }
 
     // MARK: - ViewModels
 
-    container.autoregister(AuthViewModel.self, initializer: AuthViewModel.init)
-        .inObjectScope(.container)
+    container.register(AuthViewModel.self) { _ in
+        AuthViewModel(service: di ~> (CountriesService.self, name: "graphqlCountries"))
+    }
+    .inObjectScope(.container)
 
     return container
 }()

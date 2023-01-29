@@ -7,15 +7,16 @@
 
 import Combine
 import Foundation
+import SwinjectAutoregistration
 
 internal class AuthViewModel: ObservableObject {
     @Published var token: Token?
     @Published var state = NetworkState.idle
 
-    private let service: CountriesRestService
+    private let service: CountriesService
     private var cancellables = Set<AnyCancellable>()
 
-    init(service: CountriesRestService) {
+    init(service: CountriesService) {
         self.service = service
     }
 

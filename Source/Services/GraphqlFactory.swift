@@ -21,20 +21,19 @@ internal class GraphqlFactory {
         decoder: JSONDecoder = JSONDecoder()
     ) {
         guard let url = URL(string: url) else {
-            fatalError("The API URL is invalid.")
+            fatalError("The GraphQL URL is invalid.")
         }
 
         encoder.dateEncodingStrategy = .iso8601
         decoder.dateDecodingStrategy = .iso8601Complete
 
-        self.client = ApolloClient(url: url)
+        client = ApolloClient(url: url)
         self.encoder = encoder
         self.decoder = decoder
     }
 
-    func sendMutation<T: Codable, Mutation: GraphQLMutation>(
-        mutation: Mutation,
-        type: T.Type
+    func sendMutation<T: Codable>(
+        mutation: some GraphQLMutation
     ) -> AnyPublisher<T, ApiError> {
         Future<T, ApiError> { promise in
             self.client.perform(mutation: mutation, queue: self.queue) { result in
@@ -44,7 +43,7 @@ internal class GraphqlFactory {
                     let value: T? = self.jsonToCodable(json: json)
 
                     guard let value else {
-                        promise(.failure(.unknown("Nothing")))
+                        promise(.failure(.unknown("Empty response")))
                         return
                     }
 
@@ -57,11 +56,20 @@ internal class GraphqlFactory {
         }.eraseToAnyPublisher()
     }
 
+    // MARK: - Private methods
+
     private func jsonToCodable<T: Codable>(json: JSONObject?) -> T? {
         guard
             let key = json?.first?.key,
-            let json = json?[key],
-            let jsonData = try? JSONSerialization.data(withJSONObject: json),
+            let data = json?[key]
+        else {
+            return nil
+        }
+
+        let newJson: JSONObject = ["data": data]
+
+        guard
+            let jsonData = try? JSONSerialization.data(withJSONObject: newJson),
             let value = try? decoder.decode(T.self, from: jsonData)
         else {
             return nil

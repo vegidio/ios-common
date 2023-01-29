@@ -14,10 +14,6 @@ internal struct Response<T: Codable>: Codable {
 
     var data: T
 
-    init(data: T) {
-        self.data = data
-    }
-
     // MARK: - Codable Protocol
 
     init(from decoder: Decoder) throws {

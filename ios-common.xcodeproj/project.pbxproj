@@ -110,9 +110,9 @@
 		7835248C297F277900246EB1 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				780B7A8E2979D3DF008E493C /* User.swift */,
-				7898B0D229866BB900FDF65F /* Token.swift */,
 				7898B0D52986713D00FDF65F /* Response.swift */,
+				7898B0D229866BB900FDF65F /* Token.swift */,
+				780B7A8E2979D3DF008E493C /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";

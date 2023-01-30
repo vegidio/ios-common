@@ -16,11 +16,11 @@ I used a set of well-known Android libraries so we don't have to reinvent the wh
 
 Before building the project you must use code generator to update the Swift code with the GraphQL schema:
 
-1. Install the CLI tool by right-clicking the project and selecting "Install CLI".
+1. Download the [CLI tool](https://github.com/apollographql/apollo-ios/releases) and move it to `usr/local/bin`.
 2. Run this command in the project root folder:
 
 ```
-$ ./apollo-ios-cli generate
+$ apollo-ios-cli generate
 ```
 
 ## 🎨 Code Correctness

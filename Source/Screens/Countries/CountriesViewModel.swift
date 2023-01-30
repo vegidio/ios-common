@@ -1,28 +1,27 @@
 //
-//  UserViewModel.swift
+//  CountriesViewModel.swift
 //  iOS Common
 //
-//  Created by Vinicius Egidio on 2023-01-29.
+//  Created by Vinicius Egidio on 2023-01-30.
 //
 
 import Combine
 import Foundation
-import SwinjectAutoregistration
 
-internal class UserViewModel: ObservableObject {
-    @Published var user: User?
+internal class CountriesViewModel: ObservableObject {
+    @Published var countries: [Country] = []
     @Published var state = NetworkState.idle
 
-    private let service: CountriesService
+    private var service: CountriesService
     private var cancellables = Set<AnyCancellable>()
 
     init(service: CountriesService) {
         self.service = service
     }
 
-    func fetchMe() {
+    func fetchCountries() {
         // swiftlint:disable:next trailing_closure
-        service.me()
+        service.countries()
             .handleEvents(receiveSubscription: { _ in self.state = .loading })
             .map(\.data)
             .receive(on: DispatchQueue.main)
@@ -34,8 +33,8 @@ internal class UserViewModel: ObservableObject {
                     print(error)
                     self.state = .error(error)
                 }
-            } receiveValue: { user in
-                self.user = user
+            } receiveValue: { countries in
+                self.countries = countries
             }
             .store(in: &cancellables)
     }

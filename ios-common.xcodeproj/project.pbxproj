@@ -12,7 +12,6 @@
 		780B7A962979DBD0008E493C /* CountriesRestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780B7A952979DBD0008E493C /* CountriesRestService.swift */; };
 		780B7A982979F885008E493C /* AuthScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780B7A972979F885008E493C /* AuthScreen.swift */; };
 		780B7A9B297B1EC7008E493C /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 780B7A9A297B1EC7008E493C /* Swinject */; };
-		780B7A9D297B23D9008E493C /* Inject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780B7A9C297B23D9008E493C /* Inject.swift */; };
 		780B7A9F297B251D008E493C /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780B7A9E297B251D008E493C /* Container.swift */; };
 		780B7AA2297D06FE008E493C /* SwinjectAutoregistration in Frameworks */ = {isa = PBXBuildFile; productRef = 780B7AA1297D06FE008E493C /* SwinjectAutoregistration */; };
 		7835248B297F1F9C00246EB1 /* NetworkState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7835248A297F1F9C00246EB1 /* NetworkState.swift */; };
@@ -23,11 +22,8 @@
 		786EEE302980420E009B53C2 /* HomeAuthStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786EEE2F2980420D009B53C2 /* HomeAuthStatus.swift */; };
 		786EEE3229805A46009B53C2 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786EEE3129805A46009B53C2 /* Router.swift */; };
 		7886D64029759EBD00A36158 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7886D63F29759EBD00A36158 /* HomeScreen.swift */; };
-		7886D6462975A18400A36158 /* LazyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7886D6452975A18400A36158 /* LazyView.swift */; };
 		7886D6482975A49800A36158 /* HomeMenuRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7886D6472975A49800A36158 /* HomeMenuRow.swift */; };
 		7886D64B2975BA6600A36158 /* UserScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7886D64A2975BA6600A36158 /* UserScreen.swift */; };
-		7886D64E2975BAB900A36158 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 7886D64D2975BAB900A36158 /* Alamofire */; };
-		7886D6512975BB8B00A36158 /* RestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7886D6502975BB8B00A36158 /* RestFactory.swift */; };
 		7898B0D329866BB900FDF65F /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7898B0D229866BB900FDF65F /* Token.swift */; };
 		7898B0D62986713D00FDF65F /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7898B0D52986713D00FDF65F /* Response.swift */; };
 		7898B0E32986771900FDF65F /* Mutation.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7898B0D92986771900FDF65F /* Mutation.graphql.swift */; };
@@ -37,14 +33,17 @@
 		7898B0E72986771900FDF65F /* SchemaMetadata.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7898B0DE2986771900FDF65F /* SchemaMetadata.graphql.swift */; };
 		7898B0E82986771900FDF65F /* SignInMutation.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7898B0E12986771900FDF65F /* SignInMutation.graphql.swift */; };
 		7898B0E92986771900FDF65F /* Countries.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7898B0E22986771900FDF65F /* Countries.graphql.swift */; };
-		7898B0EB29867CE600FDF65F /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7898B0EA29867CE600FDF65F /* ApiError.swift */; };
 		7898B0ED2986AA5B00FDF65F /* CountriesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7898B0EC2986AA5B00FDF65F /* CountriesService.swift */; };
 		7898B0EF2986ACFF00FDF65F /* CountriesGraphqlService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7898B0EE2986ACFF00FDF65F /* CountriesGraphqlService.swift */; };
 		7898B0F12986D94900FDF65F /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7898B0F02986D94900FDF65F /* UserViewModel.swift */; };
-		78B3BE4F29856CE100C538E2 /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = 78B3BE4E29856CE100C538E2 /* Apollo */; };
+		7898B0F52988330700FDF65F /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7898B0F42988330700FDF65F /* Country.swift */; };
+		7898B0F82988377200FDF65F /* CountriesScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7898B0F72988377200FDF65F /* CountriesScreen.swift */; };
+		7898B0FA2988379B00FDF65F /* CountriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7898B0F92988379B00FDF65F /* CountriesViewModel.swift */; };
 		78B3BE6629856F5E00C538E2 /* schema.graphqls in Resources */ = {isa = PBXBuildFile; fileRef = 78B3BE5629856F5E00C538E2 /* schema.graphqls */; };
 		78B3BE7029856F5E00C538E2 /* operations.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 78B3BE6529856F5E00C538E2 /* operations.graphql */; };
-		78B3BE722985748E00C538E2 /* GraphqlFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B3BE712985748E00C538E2 /* GraphqlFactory.swift */; };
+		78D74F7829887C8A0017AA93 /* Network in Frameworks */ = {isa = PBXBuildFile; productRef = 78D74F7729887C8A0017AA93 /* Network */; };
+		78D74F7A29887C8A0017AA93 /* Util in Frameworks */ = {isa = PBXBuildFile; productRef = 78D74F7929887C8A0017AA93 /* Util */; };
+		78D74F7C29887C8A0017AA93 /* View in Frameworks */ = {isa = PBXBuildFile; productRef = 78D74F7B29887C8A0017AA93 /* View */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,7 +51,6 @@
 		780B7A932979D8FF008E493C /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		780B7A952979DBD0008E493C /* CountriesRestService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesRestService.swift; sourceTree = "<group>"; };
 		780B7A972979F885008E493C /* AuthScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthScreen.swift; sourceTree = "<group>"; };
-		780B7A9C297B23D9008E493C /* Inject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inject.swift; sourceTree = "<group>"; };
 		780B7A9E297B251D008E493C /* Container.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
 		7835248A297F1F9C00246EB1 /* NetworkState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkState.swift; sourceTree = "<group>"; };
 		7835248D297F29C400246EB1 /* DateDecodingStrategy+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateDecodingStrategy+Ext.swift"; sourceTree = "<group>"; };
@@ -63,10 +61,8 @@
 		786EEE2F2980420D009B53C2 /* HomeAuthStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAuthStatus.swift; sourceTree = "<group>"; };
 		786EEE3129805A46009B53C2 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		7886D63F29759EBD00A36158 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
-		7886D6452975A18400A36158 /* LazyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyView.swift; sourceTree = "<group>"; };
 		7886D6472975A49800A36158 /* HomeMenuRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMenuRow.swift; sourceTree = "<group>"; };
 		7886D64A2975BA6600A36158 /* UserScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserScreen.swift; sourceTree = "<group>"; };
-		7886D6502975BB8B00A36158 /* RestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestFactory.swift; sourceTree = "<group>"; };
 		7898B0D229866BB900FDF65F /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		7898B0D52986713D00FDF65F /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		7898B0D92986771900FDF65F /* Mutation.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mutation.graphql.swift; sourceTree = "<group>"; };
@@ -76,13 +72,14 @@
 		7898B0DE2986771900FDF65F /* SchemaMetadata.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchemaMetadata.graphql.swift; sourceTree = "<group>"; };
 		7898B0E12986771900FDF65F /* SignInMutation.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInMutation.graphql.swift; sourceTree = "<group>"; };
 		7898B0E22986771900FDF65F /* Countries.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Countries.graphql.swift; sourceTree = "<group>"; };
-		7898B0EA29867CE600FDF65F /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
 		7898B0EC2986AA5B00FDF65F /* CountriesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesService.swift; sourceTree = "<group>"; };
 		7898B0EE2986ACFF00FDF65F /* CountriesGraphqlService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesGraphqlService.swift; sourceTree = "<group>"; };
 		7898B0F02986D94900FDF65F /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		7898B0F42988330700FDF65F /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
+		7898B0F72988377200FDF65F /* CountriesScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesScreen.swift; sourceTree = "<group>"; };
+		7898B0F92988379B00FDF65F /* CountriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesViewModel.swift; sourceTree = "<group>"; };
 		78B3BE5629856F5E00C538E2 /* schema.graphqls */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = schema.graphqls; sourceTree = "<group>"; };
 		78B3BE6529856F5E00C538E2 /* operations.graphql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = operations.graphql; sourceTree = "<group>"; };
-		78B3BE712985748E00C538E2 /* GraphqlFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphqlFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,10 +87,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7886D64E2975BAB900A36158 /* Alamofire in Frameworks */,
-				78B3BE4F29856CE100C538E2 /* Apollo in Frameworks */,
+				78D74F7829887C8A0017AA93 /* Network in Frameworks */,
 				780B7A9B297B1EC7008E493C /* Swinject in Frameworks */,
 				780B7AA2297D06FE008E493C /* SwinjectAutoregistration in Frameworks */,
+				78D74F7A29887C8A0017AA93 /* Util in Frameworks */,
+				78D74F7C29887C8A0017AA93 /* View in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +110,7 @@
 		7835248C297F277900246EB1 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				7898B0F42988330700FDF65F /* Country.swift */,
 				7898B0D52986713D00FDF65F /* Response.swift */,
 				7898B0D229866BB900FDF65F /* Token.swift */,
 				780B7A8E2979D3DF008E493C /* User.swift */,
@@ -144,7 +143,6 @@
 				78B3BE5529856F5E00C538E2 /* GraphQL */,
 				7886D63D29759E8F00A36158 /* Screens */,
 				7886D6442975A16E00A36158 /* Shared */,
-				7886D64F2975BB6F00A36158 /* Utils */,
 				780B7A9E297B251D008E493C /* Container.swift */,
 				783DB630297550E200AC92B2 /* MainApp.swift */,
 				783DB634297550E200AC92B2 /* Assets.xcassets */,
@@ -165,6 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				780B7A922979D8ED008E493C /* Auth */,
+				7898B0F62988375800FDF65F /* Countries */,
 				7886D63E29759EA400A36158 /* Home */,
 				7886D6492975BA4300A36158 /* User */,
 			);
@@ -192,7 +191,6 @@
 		7886D6442975A16E00A36158 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				7886D6452975A18400A36158 /* LazyView.swift */,
 				786EEE3129805A46009B53C2 /* Router.swift */,
 			);
 			path = Shared;
@@ -207,24 +205,13 @@
 			path = User;
 			sourceTree = "<group>";
 		};
-		7886D64F2975BB6F00A36158 /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				780B7A9C297B23D9008E493C /* Inject.swift */,
-			);
-			path = Utils;
-			sourceTree = "<group>";
-		};
 		7898B0D429866C5100FDF65F /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				7898B0EA29867CE600FDF65F /* ApiError.swift */,
 				7898B0EC2986AA5B00FDF65F /* CountriesService.swift */,
 				780B7A952979DBD0008E493C /* CountriesRestService.swift */,
 				7898B0EE2986ACFF00FDF65F /* CountriesGraphqlService.swift */,
-				78B3BE712985748E00C538E2 /* GraphqlFactory.swift */,
 				7835248A297F1F9C00246EB1 /* NetworkState.swift */,
-				7886D6502975BB8B00A36158 /* RestFactory.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -273,6 +260,15 @@
 			path = Mutations;
 			sourceTree = "<group>";
 		};
+		7898B0F62988375800FDF65F /* Countries */ = {
+			isa = PBXGroup;
+			children = (
+				7898B0F72988377200FDF65F /* CountriesScreen.swift */,
+				7898B0F92988379B00FDF65F /* CountriesViewModel.swift */,
+			);
+			path = Countries;
+			sourceTree = "<group>";
+		};
 		78B3BE5529856F5E00C538E2 /* GraphQL */ = {
 			isa = PBXGroup;
 			children = (
@@ -303,10 +299,11 @@
 			);
 			name = "iOS Common";
 			packageProductDependencies = (
-				7886D64D2975BAB900A36158 /* Alamofire */,
 				780B7A9A297B1EC7008E493C /* Swinject */,
 				780B7AA1297D06FE008E493C /* SwinjectAutoregistration */,
-				78B3BE4E29856CE100C538E2 /* Apollo */,
+				78D74F7729887C8A0017AA93 /* Network */,
+				78D74F7929887C8A0017AA93 /* Util */,
+				78D74F7B29887C8A0017AA93 /* View */,
 			);
 			productName = "iOS Common";
 			productReference = 783DB62D297550E200AC92B2 /* iOS Common.app */;
@@ -337,10 +334,9 @@
 			);
 			mainGroup = 783DB624297550E200AC92B2;
 			packageReferences = (
-				7886D64C2975BAB900A36158 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				780B7A99297B1EC7008E493C /* XCRemoteSwiftPackageReference "Swinject" */,
 				780B7AA0297D06FE008E493C /* XCRemoteSwiftPackageReference "SwinjectAutoregistration" */,
-				78B3BE4D29856CE100C538E2 /* XCRemoteSwiftPackageReference "apollo-ios" */,
+				78D74F7629887C8A0017AA93 /* XCRemoteSwiftPackageReference "ios-sak" */,
 			);
 			productRefGroup = 783DB62E297550E200AC92B2 /* Products */;
 			projectDirPath = "";
@@ -399,13 +395,13 @@
 				7886D64B2975BA6600A36158 /* UserScreen.swift in Sources */,
 				7898B0E52986771900FDF65F /* SchemaConfiguration.swift in Sources */,
 				7898B0E62986771900FDF65F /* SignInRequestDto.graphql.swift in Sources */,
-				780B7A9D297B23D9008E493C /* Inject.swift in Sources */,
-				7886D6512975BB8B00A36158 /* RestFactory.swift in Sources */,
 				7835248E297F29C400246EB1 /* DateDecodingStrategy+Ext.swift in Sources */,
 				780B7A982979F885008E493C /* AuthScreen.swift in Sources */,
 				7898B0E82986771900FDF65F /* SignInMutation.graphql.swift in Sources */,
+				7898B0F82988377200FDF65F /* CountriesScreen.swift in Sources */,
 				7898B0E92986771900FDF65F /* Countries.graphql.swift in Sources */,
 				7898B0F12986D94900FDF65F /* UserViewModel.swift in Sources */,
+				7898B0FA2988379B00FDF65F /* CountriesViewModel.swift in Sources */,
 				7898B0E42986771900FDF65F /* TokenResponseDto.graphql.swift in Sources */,
 				7898B0D329866BB900FDF65F /* Token.swift in Sources */,
 				7898B0E72986771900FDF65F /* SchemaMetadata.graphql.swift in Sources */,
@@ -414,13 +410,11 @@
 				7898B0D62986713D00FDF65F /* Response.swift in Sources */,
 				780B7A8F2979D3DF008E493C /* User.swift in Sources */,
 				7898B0E32986771900FDF65F /* Mutation.graphql.swift in Sources */,
-				7898B0EB29867CE600FDF65F /* ApiError.swift in Sources */,
 				7898B0EF2986ACFF00FDF65F /* CountriesGraphqlService.swift in Sources */,
 				783DB631297550E200AC92B2 /* MainApp.swift in Sources */,
-				7886D6462975A18400A36158 /* LazyView.swift in Sources */,
-				78B3BE722985748E00C538E2 /* GraphqlFactory.swift in Sources */,
 				7886D64029759EBD00A36158 /* HomeScreen.swift in Sources */,
 				7898B0ED2986AA5B00FDF65F /* CountriesService.swift in Sources */,
+				7898B0F52988330700FDF65F /* Country.swift in Sources */,
 				786EEE302980420E009B53C2 /* HomeAuthStatus.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -642,20 +636,12 @@
 				version = 2.8.1;
 			};
 		};
-		7886D64C2975BAB900A36158 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+		78D74F7629887C8A0017AA93 /* XCRemoteSwiftPackageReference "ios-sak" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			repositoryURL = "https://github.com/vegidio/ios-sak";
 			requirement = {
-				kind = exactVersion;
-				version = 5.6.4;
-			};
-		};
-		78B3BE4D29856CE100C538E2 /* XCRemoteSwiftPackageReference "apollo-ios" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/apollographql/apollo-ios";
-			requirement = {
-				kind = exactVersion;
-				version = 1.0.6;
+				branch = main;
+				kind = branch;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -671,15 +657,20 @@
 			package = 780B7AA0297D06FE008E493C /* XCRemoteSwiftPackageReference "SwinjectAutoregistration" */;
 			productName = SwinjectAutoregistration;
 		};
-		7886D64D2975BAB900A36158 /* Alamofire */ = {
+		78D74F7729887C8A0017AA93 /* Network */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 7886D64C2975BAB900A36158 /* XCRemoteSwiftPackageReference "Alamofire" */;
-			productName = Alamofire;
+			package = 78D74F7629887C8A0017AA93 /* XCRemoteSwiftPackageReference "ios-sak" */;
+			productName = Network;
 		};
-		78B3BE4E29856CE100C538E2 /* Apollo */ = {
+		78D74F7929887C8A0017AA93 /* Util */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 78B3BE4D29856CE100C538E2 /* XCRemoteSwiftPackageReference "apollo-ios" */;
-			productName = Apollo;
+			package = 78D74F7629887C8A0017AA93 /* XCRemoteSwiftPackageReference "ios-sak" */;
+			productName = Util;
+		};
+		78D74F7B29887C8A0017AA93 /* View */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 78D74F7629887C8A0017AA93 /* XCRemoteSwiftPackageReference "ios-sak" */;
+			productName = View;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

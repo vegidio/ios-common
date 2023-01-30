@@ -5,8 +5,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/Alamofire/Alamofire",
       "state" : {
-        "revision" : "78424be314842833c04bc3bef5b72e85fff99204",
-        "version" : "5.6.4"
+        "branch" : "5.6.4",
+        "revision" : "78424be314842833c04bc3bef5b72e85fff99204"
       }
     },
     {
@@ -14,8 +14,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apollographql/apollo-ios",
       "state" : {
-        "revision" : "e123b5fdbaaf926d98a6833f25cbdff51e22200b",
-        "version" : "1.0.6"
+        "branch" : "1.0.6",
+        "revision" : "e123b5fdbaaf926d98a6833f25cbdff51e22200b"
       }
     },
     {
@@ -25,6 +25,15 @@
       "state" : {
         "revision" : "d8cbcc04972690aaa5fc760a2b9ddb3e9f0decd7",
         "version" : "1.0.0"
+      }
+    },
+    {
+      "identity" : "ios-sak",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/vegidio/ios-sak",
+      "state" : {
+        "branch" : "main",
+        "revision" : "fd5c5d130d17f76c7e4431fb304f32bd4ff36bbd"
       }
     },
     {

@@ -7,6 +7,7 @@
 
 import Combine
 import Foundation
+import SAKNetwork
 
 internal protocol CountriesService {
     var headers: [String: String] { get set }
@@ -18,4 +19,9 @@ internal protocol CountriesService {
     // MARK: - Users
 
     func me() -> AnyPublisher<Response<User>, ApiError>
+
+    // MARK: - Countries
+
+    func countries() -> AnyPublisher<Response<[Country]>, ApiError>
+    func country(by code: String) -> AnyPublisher<Response<Country>, ApiError>
 }

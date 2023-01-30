@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SAKView
 import SwiftUI
 
 internal enum Destination: Codable {
@@ -17,8 +18,9 @@ internal enum Destination: Codable {
     @ViewBuilder
     var view: some View {
         switch self {
-        case .auth: LazyView { AuthScreen() }
-        case .user: LazyView { UserScreen() }
+        case .auth: Lazy { AuthScreen() }
+        case .user: Lazy { UserScreen() }
+        case .countries: Lazy { CountriesScreen() }
         default: EmptyView()
         }
     }

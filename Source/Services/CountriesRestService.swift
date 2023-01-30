@@ -7,6 +7,7 @@
 
 import Combine
 import Foundation
+import SAKNetwork
 
 internal class CountriesRestService: RestFactory, CountriesService {
     func login(email: String, password: String) -> AnyPublisher<Response<Token>, ApiError> {
@@ -19,5 +20,13 @@ internal class CountriesRestService: RestFactory, CountriesService {
 
     func me() -> AnyPublisher<Response<User>, ApiError> {
         sendRequest(.get, "v1/users/me")
+    }
+
+    func countries() -> AnyPublisher<Response<[Country]>, ApiError> {
+        sendRequest(.get, "v1/countries")
+    }
+
+    func country(by _: String) -> AnyPublisher<Response<Country>, ApiError> {
+        Empty().eraseToAnyPublisher()
     }
 }

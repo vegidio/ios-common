@@ -50,7 +50,7 @@ internal struct UserScreen: View {
             }
         }
         .onAppear {
-            viewModel.me()
+            viewModel.fetchMe()
         }
         .navigationTitle("Me")
     }

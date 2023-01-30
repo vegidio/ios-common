@@ -36,5 +36,9 @@ internal let di: Container = {
         UserViewModel(service: di ~> (CountriesService.self, name: "restCountries"))
     }
 
+    container.register(CountriesViewModel.self) { _ in
+        CountriesViewModel(service: di ~> (CountriesService.self, name: "restCountries"))
+    }
+
     return container
 }()

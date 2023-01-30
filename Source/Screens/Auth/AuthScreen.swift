@@ -13,14 +13,18 @@ private struct TokenInfo: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
-            HStack {
-                Text("Access Token:").bold()
+            HStack(alignment: .top) {
+                Text("Access:").bold()
                 Text(token.accessToken)
+                    .lineLimit(3)
+                    .truncationMode(.middle)
             }
 
-            HStack {
-                Text("Refresh Token:").bold()
+            HStack(alignment: .top) {
+                Text("Refresh:").bold()
                 Text(token.refreshToken)
+                    .lineLimit(3)
+                    .truncationMode(.middle)
             }
         }
     }
@@ -53,7 +57,7 @@ internal struct AuthScreen: View {
             }
 
             if let token = viewModel.token {
-                Section(header: Text("Current User")) {
+                Section(header: Text("Tokens")) {
                     TokenInfo(token: token)
 
                     Button("Logout") {

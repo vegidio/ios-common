@@ -7,6 +7,7 @@
 
 import Combine
 import Foundation
+import SAKNetwork
 
 internal class CountriesGraphqlService: GraphqlFactory, CountriesService {
     func login(email: String, password: String) -> AnyPublisher<Response<Token>, ApiError> {
@@ -18,6 +19,14 @@ internal class CountriesGraphqlService: GraphqlFactory, CountriesService {
     }
 
     func me() -> AnyPublisher<Response<User>, ApiError> {
+        Empty().eraseToAnyPublisher()
+    }
+
+    func countries() -> AnyPublisher<Response<[Country]>, ApiError> {
+        Empty().eraseToAnyPublisher()
+    }
+
+    func country(by _: String) -> AnyPublisher<Response<Country>, ApiError> {
         Empty().eraseToAnyPublisher()
     }
 }

@@ -36,13 +36,13 @@ internal class AuthViewModel: ObservableObject {
                 }
             } receiveValue: { token in
                 self.token = token
-                self.service.headers["Authentication"] = "Bearer \(token.accessToken)"
+                self.service.headers["Authorization"] = "Bearer \(token.accessToken)"
             }
             .store(in: &cancellables)
     }
 
     func logout() {
         token = nil
-        self.service.headers.removeValue(forKey: "Authentication")
+        service.headers.removeValue(forKey: "Authorization")
     }
 }

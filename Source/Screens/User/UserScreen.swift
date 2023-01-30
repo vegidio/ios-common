@@ -8,6 +8,34 @@
 import SwiftUI
 import SwinjectAutoregistration
 
+private struct UserInfo: View {
+    let user: User
+
+    var body: some View {
+        Section(header: Text("Current User")) {
+            HStack {
+                Text("ID:").bold()
+                Text(String(user.id))
+            }
+
+            HStack {
+                Text("Name:").bold()
+                Text(String(user.name))
+            }
+
+            HStack {
+                Text("Username:").bold()
+                Text(String(user.username))
+            }
+
+            HStack {
+                Text("E-mail:").bold()
+                Text(String(user.email))
+            }
+        }
+    }
+}
+
 internal struct UserScreen: View {
     @ObservedObject private var viewModel: UserViewModel
 
@@ -16,7 +44,15 @@ internal struct UserScreen: View {
     }
 
     var body: some View {
-        Text("USER")
+        Form {
+            if let user = viewModel.user {
+                UserInfo(user: user)
+            }
+        }
+        .onAppear {
+            viewModel.me()
+        }
+        .navigationTitle("Me")
     }
 }
 

@@ -18,6 +18,6 @@ internal class CountriesRestService: RestFactory, CountriesService {
     }
 
     func me() -> AnyPublisher<Response<User>, ApiError> {
-        sendRequest(.get, "v1/users/me", params: "")
+        sendRequest(.get, "v1/users/me")
     }
 }

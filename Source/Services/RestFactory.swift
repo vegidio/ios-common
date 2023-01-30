@@ -31,7 +31,7 @@ internal class RestFactory {
     func sendRequest(
         _ method: HTTPMethod,
         _ uri: String,
-        params: (some Encodable)? = nil,
+        params: (some Encodable) = ["": ""],
         headers: HTTPHeaders = HTTPHeaders()
     ) -> AnyPublisher<Void, ApiError> {
         let (url, paramEncoder, mergedHeaders) = normalizeParameters(.get, uri, headers)
@@ -54,7 +54,7 @@ internal class RestFactory {
     func sendRequest<T: Codable>(
         _ method: HTTPMethod,
         _ uri: String,
-        params: (some Encodable)? = nil,
+        params: (some Encodable) = ["": ""],
         headers: HTTPHeaders = HTTPHeaders()
     ) -> AnyPublisher<T, ApiError> {
         let (url, paramEncoder, mergedHeaders) = normalizeParameters(.get, uri, headers)
@@ -79,7 +79,7 @@ internal class RestFactory {
         _ uri: String,
         _ headers: HTTPHeaders
     ) -> (URL, ParameterEncoder, HTTPHeaders) {
-        let url = baseUrl.appendingPathExtension(uri)
+        let url = baseUrl.appendingPathComponent(uri)
         let paramEncoder: ParameterEncoder = method == .get ? URLEncodedFormParameterEncoder
             .default : JSONParameterEncoder.default
         let mergedHeaders = HTTPHeaders(self.headers.merging(headers.dictionary) { _, new in new })

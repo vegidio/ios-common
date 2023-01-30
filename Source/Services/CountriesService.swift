@@ -9,6 +9,8 @@ import Combine
 import Foundation
 
 internal protocol CountriesService {
+    var headers: [String: String] { get set }
+
     // MARK: - Auth
     func login(email: String, password: String) -> AnyPublisher<Response<Token>, ApiError>
 

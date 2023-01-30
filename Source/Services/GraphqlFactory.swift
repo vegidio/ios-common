@@ -15,6 +15,8 @@ internal class GraphqlFactory {
     private let decoder: JSONDecoder
     private let queue = DispatchQueue.global(qos: .background)
 
+    var headers: [String: String] = [:]
+
     init(
         url: String,
         encoder: JSONEncoder = JSONEncoder(),
@@ -32,9 +34,7 @@ internal class GraphqlFactory {
         self.decoder = decoder
     }
 
-    func sendMutation<T: Codable>(
-        mutation: some GraphQLMutation
-    ) -> AnyPublisher<T, ApiError> {
+    func sendMutation<T: Codable>(mutation: some GraphQLMutation) -> AnyPublisher<T, ApiError> {
         Future<T, ApiError> { promise in
             self.client.perform(mutation: mutation, queue: self.queue) { result in
                 switch result {

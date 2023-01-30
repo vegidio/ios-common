@@ -13,7 +13,7 @@ internal class AuthViewModel: ObservableObject {
     @Published var token: Token?
     @Published var state = NetworkState.idle
 
-    private let service: CountriesService
+    private var service: CountriesService
     private var cancellables = Set<AnyCancellable>()
 
     init(service: CountriesService) {
@@ -36,11 +36,13 @@ internal class AuthViewModel: ObservableObject {
                 }
             } receiveValue: { token in
                 self.token = token
+                self.service.headers["Authentication"] = "Bearer \(token.accessToken)"
             }
             .store(in: &cancellables)
     }
 
     func logout() {
         token = nil
+        self.service.headers.removeValue(forKey: "Authentication")
     }
 }

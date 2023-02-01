@@ -4,3 +4,12 @@ mutation signIn($dto: SignInRequestDto!) {
         refreshToken
     }
 }
+
+query me {
+    me {
+        id,
+        name,
+        username,
+        email
+    }
+}

@@ -33,6 +33,8 @@ public extension Countries {
             switch typename {
             case "Mutation": return Countries.Objects.Mutation
             case "TokenResponseDto": return Countries.Objects.TokenResponseDto
+            case "Query": return Countries.Objects.Query
+            case "User": return Countries.Objects.User
             default: return nil
             }
         }

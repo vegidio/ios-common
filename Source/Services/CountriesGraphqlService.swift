@@ -19,7 +19,7 @@ internal class CountriesGraphqlService: GraphqlFactory, CountriesService {
     }
 
     func me() -> AnyPublisher<Response<User>, ApiError> {
-        Empty().eraseToAnyPublisher()
+        sendQuery(query: Countries.MeQuery())
     }
 
     func countries() -> AnyPublisher<Response<[Country]>, ApiError> {

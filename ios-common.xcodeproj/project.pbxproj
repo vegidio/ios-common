@@ -26,24 +26,27 @@
 		7886D64B2975BA6600A36158 /* UserScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7886D64A2975BA6600A36158 /* UserScreen.swift */; };
 		7898B0D329866BB900FDF65F /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7898B0D229866BB900FDF65F /* Token.swift */; };
 		7898B0D62986713D00FDF65F /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7898B0D52986713D00FDF65F /* Response.swift */; };
-		7898B0E32986771900FDF65F /* Mutation.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7898B0D92986771900FDF65F /* Mutation.graphql.swift */; };
-		7898B0E42986771900FDF65F /* TokenResponseDto.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7898B0DA2986771900FDF65F /* TokenResponseDto.graphql.swift */; };
-		7898B0E52986771900FDF65F /* SchemaConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7898B0DB2986771900FDF65F /* SchemaConfiguration.swift */; };
-		7898B0E62986771900FDF65F /* SignInRequestDto.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7898B0DD2986771900FDF65F /* SignInRequestDto.graphql.swift */; };
-		7898B0E72986771900FDF65F /* SchemaMetadata.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7898B0DE2986771900FDF65F /* SchemaMetadata.graphql.swift */; };
-		7898B0E82986771900FDF65F /* SignInMutation.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7898B0E12986771900FDF65F /* SignInMutation.graphql.swift */; };
-		7898B0E92986771900FDF65F /* Countries.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7898B0E22986771900FDF65F /* Countries.graphql.swift */; };
 		7898B0ED2986AA5B00FDF65F /* CountriesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7898B0EC2986AA5B00FDF65F /* CountriesService.swift */; };
 		7898B0EF2986ACFF00FDF65F /* CountriesGraphqlService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7898B0EE2986ACFF00FDF65F /* CountriesGraphqlService.swift */; };
 		7898B0F12986D94900FDF65F /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7898B0F02986D94900FDF65F /* UserViewModel.swift */; };
 		7898B0F52988330700FDF65F /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7898B0F42988330700FDF65F /* Country.swift */; };
 		7898B0F82988377200FDF65F /* CountriesScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7898B0F72988377200FDF65F /* CountriesScreen.swift */; };
 		7898B0FA2988379B00FDF65F /* CountriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7898B0F92988379B00FDF65F /* CountriesViewModel.swift */; };
-		78B3BE6629856F5E00C538E2 /* schema.graphqls in Resources */ = {isa = PBXBuildFile; fileRef = 78B3BE5629856F5E00C538E2 /* schema.graphqls */; };
-		78B3BE7029856F5E00C538E2 /* operations.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 78B3BE6529856F5E00C538E2 /* operations.graphql */; };
 		78D74F7829887C8A0017AA93 /* Network in Frameworks */ = {isa = PBXBuildFile; productRef = 78D74F7729887C8A0017AA93 /* Network */; };
 		78D74F7A29887C8A0017AA93 /* Util in Frameworks */ = {isa = PBXBuildFile; productRef = 78D74F7929887C8A0017AA93 /* Util */; };
 		78D74F7C29887C8A0017AA93 /* View in Frameworks */ = {isa = PBXBuildFile; productRef = 78D74F7B29887C8A0017AA93 /* View */; };
+		78D74FF5298B11090017AA93 /* schema.graphqls in Resources */ = {isa = PBXBuildFile; fileRef = 78D74FE3298B11090017AA93 /* schema.graphqls */; };
+		78D74FF6298B11090017AA93 /* SignInMutation.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D74FE6298B11090017AA93 /* SignInMutation.graphql.swift */; };
+		78D74FF7298B11090017AA93 /* MeQuery.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D74FE8298B11090017AA93 /* MeQuery.graphql.swift */; };
+		78D74FF8298B11090017AA93 /* User.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D74FEB298B11090017AA93 /* User.graphql.swift */; };
+		78D74FF9298B11090017AA93 /* Mutation.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D74FEC298B11090017AA93 /* Mutation.graphql.swift */; };
+		78D74FFA298B11090017AA93 /* Query.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D74FED298B11090017AA93 /* Query.graphql.swift */; };
+		78D74FFB298B11090017AA93 /* TokenResponseDto.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D74FEE298B11090017AA93 /* TokenResponseDto.graphql.swift */; };
+		78D74FFC298B11090017AA93 /* SchemaConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D74FEF298B11090017AA93 /* SchemaConfiguration.swift */; };
+		78D74FFD298B11090017AA93 /* SignInRequestDto.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D74FF1298B11090017AA93 /* SignInRequestDto.graphql.swift */; };
+		78D74FFE298B11090017AA93 /* SchemaMetadata.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D74FF2298B11090017AA93 /* SchemaMetadata.graphql.swift */; };
+		78D74FFF298B11090017AA93 /* operations.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 78D74FF3298B11090017AA93 /* operations.graphql */; };
+		78D75000298B11090017AA93 /* Countries.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D74FF4298B11090017AA93 /* Countries.graphql.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,21 +68,24 @@
 		7886D64A2975BA6600A36158 /* UserScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserScreen.swift; sourceTree = "<group>"; };
 		7898B0D229866BB900FDF65F /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		7898B0D52986713D00FDF65F /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
-		7898B0D92986771900FDF65F /* Mutation.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mutation.graphql.swift; sourceTree = "<group>"; };
-		7898B0DA2986771900FDF65F /* TokenResponseDto.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenResponseDto.graphql.swift; sourceTree = "<group>"; };
-		7898B0DB2986771900FDF65F /* SchemaConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchemaConfiguration.swift; sourceTree = "<group>"; };
-		7898B0DD2986771900FDF65F /* SignInRequestDto.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInRequestDto.graphql.swift; sourceTree = "<group>"; };
-		7898B0DE2986771900FDF65F /* SchemaMetadata.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchemaMetadata.graphql.swift; sourceTree = "<group>"; };
-		7898B0E12986771900FDF65F /* SignInMutation.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInMutation.graphql.swift; sourceTree = "<group>"; };
-		7898B0E22986771900FDF65F /* Countries.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Countries.graphql.swift; sourceTree = "<group>"; };
 		7898B0EC2986AA5B00FDF65F /* CountriesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesService.swift; sourceTree = "<group>"; };
 		7898B0EE2986ACFF00FDF65F /* CountriesGraphqlService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesGraphqlService.swift; sourceTree = "<group>"; };
 		7898B0F02986D94900FDF65F /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		7898B0F42988330700FDF65F /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
 		7898B0F72988377200FDF65F /* CountriesScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesScreen.swift; sourceTree = "<group>"; };
 		7898B0F92988379B00FDF65F /* CountriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesViewModel.swift; sourceTree = "<group>"; };
-		78B3BE5629856F5E00C538E2 /* schema.graphqls */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = schema.graphqls; sourceTree = "<group>"; };
-		78B3BE6529856F5E00C538E2 /* operations.graphql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = operations.graphql; sourceTree = "<group>"; };
+		78D74FE3298B11090017AA93 /* schema.graphqls */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = schema.graphqls; sourceTree = "<group>"; };
+		78D74FE6298B11090017AA93 /* SignInMutation.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInMutation.graphql.swift; sourceTree = "<group>"; };
+		78D74FE8298B11090017AA93 /* MeQuery.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeQuery.graphql.swift; sourceTree = "<group>"; };
+		78D74FEB298B11090017AA93 /* User.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.graphql.swift; sourceTree = "<group>"; };
+		78D74FEC298B11090017AA93 /* Mutation.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mutation.graphql.swift; sourceTree = "<group>"; };
+		78D74FED298B11090017AA93 /* Query.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Query.graphql.swift; sourceTree = "<group>"; };
+		78D74FEE298B11090017AA93 /* TokenResponseDto.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenResponseDto.graphql.swift; sourceTree = "<group>"; };
+		78D74FEF298B11090017AA93 /* SchemaConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchemaConfiguration.swift; sourceTree = "<group>"; };
+		78D74FF1298B11090017AA93 /* SignInRequestDto.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInRequestDto.graphql.swift; sourceTree = "<group>"; };
+		78D74FF2298B11090017AA93 /* SchemaMetadata.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchemaMetadata.graphql.swift; sourceTree = "<group>"; };
+		78D74FF3298B11090017AA93 /* operations.graphql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = operations.graphql; sourceTree = "<group>"; };
+		78D74FF4298B11090017AA93 /* Countries.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Countries.graphql.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,7 +146,7 @@
 				7886D6412975A0EA00A36158 /* Extensions */,
 				7835248C297F277900246EB1 /* Models */,
 				7898B0D429866C5100FDF65F /* Services */,
-				78B3BE5529856F5E00C538E2 /* GraphQL */,
+				78D74FE2298B11090017AA93 /* GraphQL */,
 				7886D63D29759E8F00A36158 /* Screens */,
 				7886D6442975A16E00A36158 /* Shared */,
 				780B7A9E297B251D008E493C /* Container.swift */,
@@ -216,50 +222,6 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
-		7898B0D72986771900FDF65F /* Schema */ = {
-			isa = PBXGroup;
-			children = (
-				7898B0D82986771900FDF65F /* Objects */,
-				7898B0DB2986771900FDF65F /* SchemaConfiguration.swift */,
-				7898B0DC2986771900FDF65F /* InputObjects */,
-				7898B0DE2986771900FDF65F /* SchemaMetadata.graphql.swift */,
-			);
-			path = Schema;
-			sourceTree = "<group>";
-		};
-		7898B0D82986771900FDF65F /* Objects */ = {
-			isa = PBXGroup;
-			children = (
-				7898B0D92986771900FDF65F /* Mutation.graphql.swift */,
-				7898B0DA2986771900FDF65F /* TokenResponseDto.graphql.swift */,
-			);
-			path = Objects;
-			sourceTree = "<group>";
-		};
-		7898B0DC2986771900FDF65F /* InputObjects */ = {
-			isa = PBXGroup;
-			children = (
-				7898B0DD2986771900FDF65F /* SignInRequestDto.graphql.swift */,
-			);
-			path = InputObjects;
-			sourceTree = "<group>";
-		};
-		7898B0DF2986771900FDF65F /* Operations */ = {
-			isa = PBXGroup;
-			children = (
-				7898B0E02986771900FDF65F /* Mutations */,
-			);
-			path = Operations;
-			sourceTree = "<group>";
-		};
-		7898B0E02986771900FDF65F /* Mutations */ = {
-			isa = PBXGroup;
-			children = (
-				7898B0E12986771900FDF65F /* SignInMutation.graphql.swift */,
-			);
-			path = Mutations;
-			sourceTree = "<group>";
-		};
 		7898B0F62988375800FDF65F /* Countries */ = {
 			isa = PBXGroup;
 			children = (
@@ -269,16 +231,71 @@
 			path = Countries;
 			sourceTree = "<group>";
 		};
-		78B3BE5529856F5E00C538E2 /* GraphQL */ = {
+		78D74FE2298B11090017AA93 /* GraphQL */ = {
 			isa = PBXGroup;
 			children = (
-				7898B0DF2986771900FDF65F /* Operations */,
-				7898B0D72986771900FDF65F /* Schema */,
-				7898B0E22986771900FDF65F /* Countries.graphql.swift */,
-				78B3BE6529856F5E00C538E2 /* operations.graphql */,
-				78B3BE5629856F5E00C538E2 /* schema.graphqls */,
+				78D74FE4298B11090017AA93 /* Operations */,
+				78D74FE9298B11090017AA93 /* Schema */,
+				78D74FF4298B11090017AA93 /* Countries.graphql.swift */,
+				78D74FE3298B11090017AA93 /* schema.graphqls */,
+				78D74FF3298B11090017AA93 /* operations.graphql */,
 			);
 			path = GraphQL;
+			sourceTree = "<group>";
+		};
+		78D74FE4298B11090017AA93 /* Operations */ = {
+			isa = PBXGroup;
+			children = (
+				78D74FE5298B11090017AA93 /* Mutations */,
+				78D74FE7298B11090017AA93 /* Queries */,
+			);
+			path = Operations;
+			sourceTree = "<group>";
+		};
+		78D74FE5298B11090017AA93 /* Mutations */ = {
+			isa = PBXGroup;
+			children = (
+				78D74FE6298B11090017AA93 /* SignInMutation.graphql.swift */,
+			);
+			path = Mutations;
+			sourceTree = "<group>";
+		};
+		78D74FE7298B11090017AA93 /* Queries */ = {
+			isa = PBXGroup;
+			children = (
+				78D74FE8298B11090017AA93 /* MeQuery.graphql.swift */,
+			);
+			path = Queries;
+			sourceTree = "<group>";
+		};
+		78D74FE9298B11090017AA93 /* Schema */ = {
+			isa = PBXGroup;
+			children = (
+				78D74FEA298B11090017AA93 /* Objects */,
+				78D74FEF298B11090017AA93 /* SchemaConfiguration.swift */,
+				78D74FF0298B11090017AA93 /* InputObjects */,
+				78D74FF2298B11090017AA93 /* SchemaMetadata.graphql.swift */,
+			);
+			path = Schema;
+			sourceTree = "<group>";
+		};
+		78D74FEA298B11090017AA93 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				78D74FEB298B11090017AA93 /* User.graphql.swift */,
+				78D74FEC298B11090017AA93 /* Mutation.graphql.swift */,
+				78D74FED298B11090017AA93 /* Query.graphql.swift */,
+				78D74FEE298B11090017AA93 /* TokenResponseDto.graphql.swift */,
+			);
+			path = Objects;
+			sourceTree = "<group>";
+		};
+		78D74FF0298B11090017AA93 /* InputObjects */ = {
+			isa = PBXGroup;
+			children = (
+				78D74FF1298B11090017AA93 /* SignInRequestDto.graphql.swift */,
+			);
+			path = InputObjects;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -353,9 +370,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				783DB638297550E200AC92B2 /* Preview Assets.xcassets in Resources */,
-				78B3BE6629856F5E00C538E2 /* schema.graphqls in Resources */,
+				78D74FF5298B11090017AA93 /* schema.graphqls in Resources */,
 				783DB635297550E200AC92B2 /* Assets.xcassets in Resources */,
-				78B3BE7029856F5E00C538E2 /* operations.graphql in Resources */,
+				78D74FFF298B11090017AA93 /* operations.graphql in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -391,30 +408,33 @@
 				786EEE3229805A46009B53C2 /* Router.swift in Sources */,
 				780B7A9F297B251D008E493C /* Container.swift in Sources */,
 				780B7A942979D8FF008E493C /* AuthViewModel.swift in Sources */,
+				78D74FFA298B11090017AA93 /* Query.graphql.swift in Sources */,
+				78D74FF7298B11090017AA93 /* MeQuery.graphql.swift in Sources */,
 				7886D6482975A49800A36158 /* HomeMenuRow.swift in Sources */,
 				7886D64B2975BA6600A36158 /* UserScreen.swift in Sources */,
-				7898B0E52986771900FDF65F /* SchemaConfiguration.swift in Sources */,
-				7898B0E62986771900FDF65F /* SignInRequestDto.graphql.swift in Sources */,
 				7835248E297F29C400246EB1 /* DateDecodingStrategy+Ext.swift in Sources */,
 				780B7A982979F885008E493C /* AuthScreen.swift in Sources */,
-				7898B0E82986771900FDF65F /* SignInMutation.graphql.swift in Sources */,
 				7898B0F82988377200FDF65F /* CountriesScreen.swift in Sources */,
-				7898B0E92986771900FDF65F /* Countries.graphql.swift in Sources */,
 				7898B0F12986D94900FDF65F /* UserViewModel.swift in Sources */,
 				7898B0FA2988379B00FDF65F /* CountriesViewModel.swift in Sources */,
-				7898B0E42986771900FDF65F /* TokenResponseDto.graphql.swift in Sources */,
 				7898B0D329866BB900FDF65F /* Token.swift in Sources */,
-				7898B0E72986771900FDF65F /* SchemaMetadata.graphql.swift in Sources */,
 				780B7A962979DBD0008E493C /* CountriesRestService.swift in Sources */,
 				7835248B297F1F9C00246EB1 /* NetworkState.swift in Sources */,
+				78D74FF6298B11090017AA93 /* SignInMutation.graphql.swift in Sources */,
+				78D74FF9298B11090017AA93 /* Mutation.graphql.swift in Sources */,
 				7898B0D62986713D00FDF65F /* Response.swift in Sources */,
+				78D74FFD298B11090017AA93 /* SignInRequestDto.graphql.swift in Sources */,
 				780B7A8F2979D3DF008E493C /* User.swift in Sources */,
-				7898B0E32986771900FDF65F /* Mutation.graphql.swift in Sources */,
+				78D74FF8298B11090017AA93 /* User.graphql.swift in Sources */,
 				7898B0EF2986ACFF00FDF65F /* CountriesGraphqlService.swift in Sources */,
 				783DB631297550E200AC92B2 /* MainApp.swift in Sources */,
+				78D74FFB298B11090017AA93 /* TokenResponseDto.graphql.swift in Sources */,
 				7886D64029759EBD00A36158 /* HomeScreen.swift in Sources */,
+				78D75000298B11090017AA93 /* Countries.graphql.swift in Sources */,
 				7898B0ED2986AA5B00FDF65F /* CountriesService.swift in Sources */,
+				78D74FFC298B11090017AA93 /* SchemaConfiguration.swift in Sources */,
 				7898B0F52988330700FDF65F /* Country.swift in Sources */,
+				78D74FFE298B11090017AA93 /* SchemaMetadata.graphql.swift in Sources */,
 				786EEE302980420E009B53C2 /* HomeAuthStatus.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

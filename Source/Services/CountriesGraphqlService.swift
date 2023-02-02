@@ -11,6 +11,9 @@ import SAKNetwork
 
 internal class CountriesGraphqlService: GraphqlFactory, CountriesService {
     func login(email: String, password: String) -> AnyPublisher<Response<Token>, ApiError> {
+        // Clear any existing cache
+        clearCache()
+
         let mutation = Countries.SignInMutation(dto: Countries.SignInRequestDto(
             email: email,
             password: password
@@ -23,10 +26,10 @@ internal class CountriesGraphqlService: GraphqlFactory, CountriesService {
     }
 
     func countries() -> AnyPublisher<Response<[Country]>, ApiError> {
-        Empty().eraseToAnyPublisher()
+        sendQuery(query: Countries.CountriesQuery())
     }
 
-    func country(by _: String) -> AnyPublisher<Response<Country>, ApiError> {
-        Empty().eraseToAnyPublisher()
+    func country(by code: String) -> AnyPublisher<Response<Country>, ApiError> {
+        sendQuery(query: Countries.CountryQuery(code: code))
     }
 }

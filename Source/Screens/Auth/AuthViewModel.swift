@@ -7,6 +7,7 @@
 
 import Combine
 import Foundation
+import SAKNetwork
 import SwinjectAutoregistration
 
 internal class AuthViewModel: ObservableObject {

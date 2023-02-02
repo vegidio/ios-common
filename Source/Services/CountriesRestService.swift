@@ -26,7 +26,7 @@ internal class CountriesRestService: RestFactory, CountriesService {
         sendRequest(.get, "v1/countries")
     }
 
-    func country(by _: String) -> AnyPublisher<Response<Country>, ApiError> {
-        Empty().eraseToAnyPublisher()
+    func country(by code: String) -> AnyPublisher<Response<Country>, ApiError> {
+        sendRequest(.get, "v1/countries/\(code)")
     }
 }

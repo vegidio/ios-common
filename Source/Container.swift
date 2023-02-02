@@ -28,16 +28,16 @@ internal let di: Container = {
     // MARK: - ViewModels
 
     container.register(AuthViewModel.self) { _ in
-        AuthViewModel(service: di ~> (CountriesService.self, name: "restCountries"))
+        AuthViewModel(service: di ~> (CountriesService.self, name: "graphqlCountries"))
     }
     .inObjectScope(.container)
 
     container.register(UserViewModel.self) { _ in
-        UserViewModel(service: di ~> (CountriesService.self, name: "restCountries"))
+        UserViewModel(service: di ~> (CountriesService.self, name: "graphqlCountries"))
     }
 
     container.register(CountriesViewModel.self) { _ in
-        CountriesViewModel(service: di ~> (CountriesService.self, name: "restCountries"))
+        CountriesViewModel(service: di ~> (CountriesService.self, name: "graphqlCountries"))
     }
 
     return container

@@ -35,6 +35,12 @@ public extension Countries {
             case "TokenResponseDto": return Countries.Objects.TokenResponseDto
             case "Query": return Countries.Objects.Query
             case "User": return Countries.Objects.User
+            case "Country": return Countries.Objects.Country
+            case "Name": return Countries.Objects.Name
+            case "NativeName": return Countries.Objects.NativeName
+            case "Language": return Countries.Objects.Language
+            case "Currency": return Countries.Objects.Currency
+            case "Flag": return Countries.Objects.Flag
             default: return nil
             }
         }

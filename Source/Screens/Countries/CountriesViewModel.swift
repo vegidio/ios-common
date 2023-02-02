@@ -7,6 +7,7 @@
 
 import Combine
 import Foundation
+import SAKNetwork
 
 internal class CountriesViewModel: ObservableObject {
     @Published var countries: [Country] = []

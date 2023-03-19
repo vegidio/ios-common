@@ -21,6 +21,11 @@ internal class CountriesGraphqlService: GraphqlFactory, CountriesService {
         return sendMutation(mutation: mutation)
     }
 
+    func logout() {
+        headers.removeValue(forKey: "Authorization")
+        clearCache()
+    }
+
     func me() -> AnyPublisher<Response<User>, ApiError> {
         sendQuery(query: Countries.MeQuery())
     }

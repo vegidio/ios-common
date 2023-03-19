@@ -15,6 +15,7 @@ internal protocol CountriesService {
     // MARK: - Auth
 
     func login(email: String, password: String) -> AnyPublisher<Response<Token>, ApiError>
+    func logout()
 
     // MARK: - Users
 

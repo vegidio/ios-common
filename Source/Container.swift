@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SAKNetwork
 import Swinject
 import SwinjectAutoregistration
 
@@ -28,16 +29,16 @@ internal let di: Container = {
     // MARK: - ViewModels
 
     container.register(AuthViewModel.self) { _ in
-        AuthViewModel(service: di ~> (CountriesService.self, name: "graphqlCountries"))
+        AuthViewModel(service: di ~> (CountriesService.self, name: "restCountries"))
     }
     .inObjectScope(.container)
 
     container.register(UserViewModel.self) { _ in
-        UserViewModel(service: di ~> (CountriesService.self, name: "graphqlCountries"))
+        UserViewModel(service: di ~> (CountriesService.self, name: "restCountries"))
     }
 
     container.register(CountriesViewModel.self) { _ in
-        CountriesViewModel(service: di ~> (CountriesService.self, name: "graphqlCountries"))
+        CountriesViewModel(service: di ~> (CountriesService.self, name: "restCountries"))
     }
 
     return container

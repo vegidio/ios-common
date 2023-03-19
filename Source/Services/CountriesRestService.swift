@@ -11,11 +11,19 @@ import SAKNetwork
 
 internal class CountriesRestService: RestFactory, CountriesService {
     func login(email: String, password: String) -> AnyPublisher<Response<Token>, ApiError> {
+        // Clear any existing cache
+        clearCache()
+
         let params = [
             "email": email,
             "password": password
         ]
         return sendRequest(.post, "v1/auth/signin", params: params)
+    }
+
+    func logout() {
+        headers.removeValue(forKey: "Authorization")
+        clearCache()
     }
 
     func me() -> AnyPublisher<Response<User>, ApiError> {

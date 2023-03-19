@@ -44,6 +44,6 @@ internal class AuthViewModel: ObservableObject {
 
     func logout() {
         token = nil
-        service.headers.removeValue(forKey: "Authorization")
+        service.logout()
     }
 }
